@@ -10,9 +10,18 @@
 
 | 编号 | 研究项目 | 摘要 | 原始仓库 | 研究状态 | Web 演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| 001 | [Jan](projects/001-jan/README.md) | 类 ChatGPT 的开源桌面 App：组织上下文、接入本地或云端模型并执行工具；附架构研究与 Web 页面 | [janhq/jan](https://github.com/janhq/jan) | 研究中 | — |
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 
 ## 项目图览
+
+### 001 · [Jan](projects/001-jan/README.md)
+
+[理解汇总](projects/001-jan/notes/understanding.md) · [Web 页面本地查看](projects/001-jan/web/README.md)（尚未上线）
+
+**Jan 是一个类 ChatGPT 的开源桌面 App。** 以“输入 → 上下文 → 模型 → 反馈”为核心，关联记忆检索、工具与子 Agent、下载升级和文件管理。另附六大能力域与十八个源码研究入口。原创概念架构图；已做源码静态梳理，尚未运行验证。
+
+![Jan：基础链路与记忆、工具执行、模型资源及共同支撑模块的关系](projects/001-jan/assets/core-flow-architecture.png)
 
 ### 004 · [小智 ESP32](projects/004-xiaozhi-esp32/README.md)
 

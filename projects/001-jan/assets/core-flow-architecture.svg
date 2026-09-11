@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1870" viewBox="0 0 2560 1870">
+<title>Jan：基础链路与扩展模块关系图</title>
+<desc>用户输入、组织上下文、模型适配、模型推理和反馈处理构成主链路。工具和子Agent形成回路；记忆、文件、模型资源与交付模块提供支撑。</desc>
+<rect x="0" y="0" width="2560" height="1870" rx="0" fill="#F1F5F9"/>
+<rect x="0" y="0" width="2560" height="180" rx="0" fill="#142B45"/>
+<text x="60" y="25" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#A7C5E4">JAN / 架构关系图</text>
+<text x="60" y="67" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="51" font-weight="700" fill="#FFFFFF">以基础链路为核心，看清每个模块的作用</text>
+<text x="62" y="140" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#D3E2F0">模型提供理解、生成与决策；Jan 组织上下文、管理运行并执行操作。</text>
+<polyline points="1775,57 1845,57" fill="none" stroke="#8DC6FF" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="1845.0,57.0 1826.0,48.0 1826.0,66.0" fill="#8DC6FF"/>
+<text x="1865" y="41" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF">主链路</text>
+<polyline points="2045,57 2115,57" fill="none" stroke="#BCA6DD" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="2115.0,57.0 2096.0,48.0 2096.0,66.0" fill="#BCA6DD"/>
+<text x="2135" y="41" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF">支撑 / 记录</text>
+<polyline points="1775,118 1845,118" fill="none" stroke="#F4B56D" stroke-width="5" stroke-linejoin="round"/>
+<polygon points="1845.0,118.0 1826.0,109.0 1826.0,127.0" fill="#F4B56D"/>
+<text x="1865" y="102" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF">Agent 执行循环（按需）</text>
+<polyline points="2280,265 2280,220 940,220 940,265" fill="none" stroke="#7A5BA7" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="940.0,265.0 949.0,246.0 931.0,246.0" fill="#7A5BA7"/>
+<rect x="1241" y="198" width="423.375" height="39" rx="5" fill="#F1F5F9"/>
+<text x="1250" y="203" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#7A5BA7">保存的会话 → 供下一轮组装上下文</text>
+<rect x="60" y="265" width="420" height="265" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="60" y="265" width="7" height="265" rx="3" fill="#7A5BA7"/>
+<text x="85" y="289" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7A5BA7">入口与工作空间</text>
+<text x="85" y="352" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">桌面：窗口 / 主题 / 语言</text>
+<text x="85" y="398" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">业务：会话 / 助手 / 项目</text>
+<text x="85" y="444" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">外部：CLI / 本地 API</text>
+<rect x="550" y="265" width="780" height="265" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="550" y="265" width="7" height="265" rx="3" fill="#7A5BA7"/>
+<text x="575" y="289" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7A5BA7">上下文从哪里来？</text>
+<text x="575" y="352" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">会话历史、角色指令、项目说明 → 组织输入</text>
+<text x="575" y="398" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">项目文件 → 解析 / 分块 / 检索 → 相关片段</text>
+<text x="575" y="444" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">长期记忆、技能说明 → 按需检索或加载</text>
+<rect x="1430" y="265" width="540" height="265" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1430" y="265" width="7" height="265" rx="3" fill="#7A5BA7"/>
+<text x="1455" y="289" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7A5BA7">模型怎样准备好？</text>
+<text x="1455" y="352" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">本地：下载 / 续传 / 校验 / 导入</text>
+<text x="1455" y="398" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">运行：硬件适配 / 加载 / 卸载</text>
+<text x="1455" y="444" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">云端：配置可访问的模型服务</text>
+<rect x="2070" y="265" width="430" height="265" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="2070" y="265" width="7" height="265" rx="3" fill="#7A5BA7"/>
+<text x="2095" y="289" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#7A5BA7">输出呈现与记录</text>
+<text x="2095" y="352" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">流式文字、文件与产物卡片</text>
+<text x="2095" y="398" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">显示工具进度与错误信息</text>
+<text x="2095" y="444" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">保存会话；按配置写入记忆</text>
+<rect x="30" y="660" width="2500" height="670" rx="24" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<polyline points="270,530 270,720" fill="none" stroke="#7A5BA7" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="270.0,720.0 279.0,701.0 261.0,701.0" fill="#7A5BA7"/>
+<rect x="176" y="598" width="118.0" height="38" rx="5" fill="#F1F5F9"/>
+<text x="185" y="603" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#7A5BA7">组织输入</text>
+<polyline points="940,530 940,575 725,575 725,720" fill="none" stroke="#7A5BA7" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="725.0,720.0 734.0,701.0 716.0,701.0" fill="#7A5BA7"/>
+<rect x="625" y="598" width="143.0" height="38" rx="5" fill="#F1F5F9"/>
+<text x="634" y="603" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#7A5BA7">提供上下文</text>
+<polyline points="1700,530 1700,720" fill="none" stroke="#7A5BA7" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="1700.0,720.0 1709.0,701.0 1691.0,701.0" fill="#7A5BA7"/>
+<rect x="1585" y="598" width="168.0" height="38" rx="5" fill="#F1F5F9"/>
+<text x="1594" y="603" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#7A5BA7">准备模型运行</text>
+<polyline points="2285,720 2285,530" fill="none" stroke="#7A5BA7" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="2285.0,530.0 2276.0,549.0 2294.0,549.0" fill="#7A5BA7"/>
+<rect x="2191" y="598" width="143.0" height="38" rx="5" fill="#F1F5F9"/>
+<text x="2200" y="603" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#7A5BA7">展示与保存</text>
+<text x="62" y="936" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#256BB1">蓝色主链路：普通聊天的一次交互</text>
+<rect x="60" y="720" width="420" height="180" rx="18" fill="#EAF3FC" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="60" y="720" width="7" height="180" rx="3" fill="#256BB1"/>
+<text x="85" y="744" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#256BB1">01  用户输入</text>
+<text x="85" y="807" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">提问、任务、附件</text>
+<text x="85" y="853" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">也可来自外部程序</text>
+<rect x="550" y="720" width="350" height="180" rx="18" fill="#EAF3FC" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="550" y="720" width="7" height="180" rx="3" fill="#256BB1"/>
+<text x="575" y="744" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#256BB1">02  组织上下文</text>
+<text x="575" y="807" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">当前输入 + 必要信息</text>
+<text x="575" y="853" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">筛选 / 召回 / 压缩</text>
+<rect x="1000" y="720" width="350" height="180" rx="18" fill="#EAF3FC" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1000" y="720" width="7" height="180" rx="3" fill="#256BB1"/>
+<text x="1025" y="744" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#256BB1">03  模型适配</text>
+<text x="1025" y="807" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">选择模型、转换请求</text>
+<text x="1025" y="853" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">参数、能力与协议适配</text>
+<rect x="1450" y="720" width="520" height="180" rx="18" fill="#EAF3FC" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1450" y="720" width="7" height="180" rx="3" fill="#256BB1"/>
+<text x="1475" y="744" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#256BB1">04  大模型推理</text>
+<text x="1475" y="807" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">本地：llama.cpp / MLX 运行模型</text>
+<text x="1475" y="853" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">或云端：通过 API 调用模型</text>
+<rect x="2070" y="720" width="430" height="180" rx="18" fill="#EAF3FC" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="2070" y="720" width="7" height="180" rx="3" fill="#256BB1"/>
+<text x="2095" y="744" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#256BB1">05  处理模型反馈</text>
+<text x="2095" y="807" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">直接回答 → 展示并保存</text>
+<text x="2095" y="853" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">工具请求 → 进入下方循环</text>
+<polyline points="480,810 550,810" fill="none" stroke="#256BB1" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="550.0,810.0 531.0,801.0 531.0,819.0" fill="#256BB1"/>
+<polyline points="900,810 1000,810" fill="none" stroke="#256BB1" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="1000.0,810.0 981.0,801.0 981.0,819.0" fill="#256BB1"/>
+<polyline points="1350,810 1450,810" fill="none" stroke="#256BB1" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="1450.0,810.0 1431.0,801.0 1431.0,819.0" fill="#256BB1"/>
+<polyline points="1970,810 2070,810" fill="none" stroke="#256BB1" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="2070.0,810.0 2051.0,801.0 2051.0,819.0" fill="#256BB1"/>
+<text x="62" y="977" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#142B45">为什么还需要其他模块？</text>
+<text x="62" y="1039" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#52677D">提供信息：文件、记忆、检索</text>
+<text x="62" y="1090" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#52677D">提供行动：工具、子 Agent</text>
+<text x="62" y="1141" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#52677D">保障可用：下载、存储、升级</text>
+<text x="62" y="1213" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#B8681E">普通聊天可跳过橙色执行循环。</text>
+<rect x="1000" y="1050" width="350" height="220" rx="18" fill="#FFF5E8" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1000" y="1050" width="7" height="220" rx="3" fill="#B8681E"/>
+<text x="1025" y="1074" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#B8681E">执行结果回传</text>
+<text x="1025" y="1137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">工具数据、执行状态</text>
+<text x="1025" y="1183" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">子任务结果、错误信息</text>
+<rect x="1450" y="1050" width="520" height="220" rx="18" fill="#FFF5E8" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1450" y="1050" width="7" height="220" rx="3" fill="#B8681E"/>
+<text x="1475" y="1074" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#B8681E">工具与子 Agent 执行</text>
+<text x="1475" y="1137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">权限检查 → MCP / 本地工具</text>
+<text x="1475" y="1183" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">文件读写、命令、网页搜索</text>
+<text x="1475" y="1229" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">子 Agent：派发 / 排队 / 回收</text>
+<rect x="2070" y="1050" width="430" height="220" rx="18" fill="#FFF5E8" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="2070" y="1050" width="7" height="220" rx="3" fill="#B8681E"/>
+<text x="2095" y="1074" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#B8681E">Agent 执行编排</text>
+<text x="2095" y="1137" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">解析模型提出的操作</text>
+<text x="2095" y="1183" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">协调授权、取消与进度</text>
+<text x="2095" y="1229" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">决定继续执行或结束</text>
+<polyline points="2285,900 2285,1050" fill="none" stroke="#B8681E" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="2285.0,1050.0 2294.0,1031.0 2276.0,1031.0" fill="#B8681E"/>
+<rect x="2296" y="957" width="143.0" height="38" rx="5" fill="#F1F5F9"/>
+<text x="2305" y="962" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#B8681E">需执行操作</text>
+<polyline points="2070,1160 1970,1160" fill="none" stroke="#B8681E" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="1970.0,1160.0 1989.0,1169.0 1989.0,1151.0" fill="#B8681E"/>
+<polyline points="1450,1160 1350,1160" fill="none" stroke="#B8681E" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="1350.0,1160.0 1369.0,1169.0 1369.0,1151.0" fill="#B8681E"/>
+<polyline points="1000,1160 725,1160 725,900" fill="none" stroke="#B8681E" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="725.0,900.0 716.0,919.0 734.0,919.0" fill="#B8681E"/>
+<rect x="753" y="1111" width="122.0" height="39" rx="5" fill="#F1F5F9"/>
+<text x="762" y="1116" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#B8681E">追加结果</text>
+<rect x="729" y="956" width="174.0" height="39" rx="5" fill="#F1F5F9"/>
+<text x="738" y="961" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#B8681E">再次调用模型</text>
+<rect x="30" y="1430" width="2500" height="330" rx="22" fill="#E4ECF5" stroke="#D5DFEA" stroke-width="2"/>
+<text x="62" y="1452" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#142B45">共同支撑层  /  保障整条链路可用、可维护</text>
+<polyline points="1280,1430 1280,1330" fill="none" stroke="#72859B" stroke-width="4" stroke-linejoin="round" stroke-dasharray="11 9"/>
+<polygon points="1280.0,1330.0 1271.0,1349.0 1289.0,1349.0" fill="#72859B"/>
+<rect x="1301" y="1359" width="396.0" height="40" rx="5" fill="#F1F5F9"/>
+<text x="1310" y="1364" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">共同支撑，并非每轮对话都执行</text>
+<rect x="60" y="1520" width="565" height="210" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="60" y="1520" width="7" height="210" rx="3" fill="#4D6D99"/>
+<text x="85" y="1544" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#4D6D99">文件与业务数据</text>
+<text x="85" y="1607" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">文件读写 / 附件归属 / 数据目录</text>
+<text x="85" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">会话和设置持久化 / 数据迁移</text>
+<rect x="685" y="1520" width="565" height="210" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="685" y="1520" width="7" height="210" rx="3" fill="#4D6D99"/>
+<text x="710" y="1544" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#4D6D99">服务抽象与扩展</text>
+<text x="710" y="1607" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">ServiceHub 屏蔽平台差异</text>
+<text x="710" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">扩展注册 / 加载 / 生命周期</text>
+<rect x="1310" y="1520" width="565" height="210" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1310" y="1520" width="7" height="210" rx="3" fill="#4D6D99"/>
+<text x="1335" y="1544" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#4D6D99">配置与凭据管理</text>
+<text x="1335" y="1607" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">模型参数 / 服务地址 / 运行配置</text>
+<text x="1335" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">系统凭据库 / 设置存储</text>
+<rect x="1935" y="1520" width="565" height="210" rx="18" fill="#FFFFFF" stroke="#D5DFEA" stroke-width="2"/>
+<rect x="1935" y="1520" width="7" height="210" rx="3" fill="#4D6D99"/>
+<text x="1960" y="1544" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#4D6D99">升级、日志与发布</text>
+<text x="1960" y="1607" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">应用更新：检查 / 下载 / 安装 / 重启</text>
+<text x="1960" y="1653" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#52677D">日志 / 自动化测试 / 跨平台打包</text>
+<text x="60" y="1793" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#142B45">阅读方式：先沿蓝色看主链路，再看紫色支撑，最后看橙色循环。各扩展按任务需要启用。</text>
+<text x="60" y="1837" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#52677D">依据：janhq/jan · f4c46fe｜原创概念架构图，非逐函数调用图；静态源码研究，未运行验证。</text>
+</svg>
