@@ -45,7 +45,7 @@ export function createArtifact(mode,raw){
  if(mode==='experiment')return experimentHtml(a);
  if(mode==='slide'){
    const slide=makeSlides(a.title)[0];
-   slide.elements.find(e=>e.id==='variables').content='<p>'+a.voltage+' V ÷ '+a.resistance+' Ω = '+i+' mA</p>';
+   slide.elements.find(e=>e.id==='variables').content='<p style="margin:0;font-size:30px;line-height:1.3;color:#153355">'+a.voltage+' V ÷ '+a.resistance+' Ω = '+i+' mA</p>';
    return {slide,actions:[{name:'spotlight',elementId:'formula',text:'先看关系：I = U / R。'},{name:'spotlight',elementId:'variables',text:'代入 '+a.voltage+' V 和 '+a.resistance+' Ω，电流为 '+i+' mA。'},{name:'spotlight',elementId:'condition',text:'这是理想欧姆电阻模型，忽略温度与电源内阻影响。'}]};
  }
  if(mode==='board')return {actions:[{name:'wb_open'},...['I = U / R','I = '+a.voltage+' / '+a.resistance+' = '+(a.current/1000).toFixed(4)+' A','I = '+i+' mA','P = U × I = '+power+' W'].map((text,n)=>({name:'wb_draw_text',params:{elementId:'step-'+n,text,x:35,y:70+n*70}}))]};

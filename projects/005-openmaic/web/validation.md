@@ -14,6 +14,7 @@
 
 ## 远端发布核验
 
+- 生成实验台在 2026-09-11 随 [e55e9d6](https://github.com/yydshly/0912_codex_project/commit/e55e9d68c1b1804569d55d328a00415c354d602a) 发布，[工作流成功](https://github.com/yydshly/0912_codex_project/actions/runs/34572010462)，`generation.html`、入口脚本与样式文件均通过 HTTP 200 检查。后续修订沿用同一发布流程。
 - 首次发布研究提交：[a2bfed1](https://github.com/yydshly/0912_codex_project/commit/a2bfed11c9fc94ca614224ed0f83d1e9304fe5fe)；[对应工作流](https://github.com/yydshly/0912_codex_project/actions/runs/34570237130)全部成功，包含案例检查、两项目构建和 Pages 部署。
 - 在该提交的独立干净检出中安装锁定依赖、构建两站并汇总，对线上 **379 个文件**逐个检查 HTTP 与 SHA-256，全部一致；文本换行归一化，二进制按原字节比较。覆盖总入口、004 原有页面、005 的 14 个 HTML、图片及打包依赖。这是部署文件一致性检查，不是浏览器交互测试。
 - 核验后补充了正式在线入口和本记录；后续更新继续由同一工作流发布，可在对应提交的干净检出中运行 `python scripts/check_pages.py` 复核。

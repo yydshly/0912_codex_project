@@ -4,6 +4,8 @@
 
 **[在线研究与能力展示](https://yydshly.github.io/0912_codex_project/005-openmaic/)** · [理解汇总](https://yydshly.github.io/0912_codex_project/005-openmaic/docs/understanding.html) · [互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html) · [六模块原理](https://yydshly.github.io/0912_codex_project/005-openmaic/docs/module-principles.html)
 
+**[打开六能力生成与执行实验台](https://yydshly.github.io/0912_codex_project/005-openmaic/generation.html)**：先选择模块，再点击“示范修改一处 → 应用修改”，观察产物怎样改变实际效果。
+
 ## 查看与运行
 
 ```powershell
