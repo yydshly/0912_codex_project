@@ -1,0 +1,49 @@
+# Operating systems / editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local secrets (sanitized examples may be committed)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# JavaScript dependencies / build output
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.cache/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Python environments / caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local logs / temporary files
+*.log
+tmp/
+temp/
+
+# Optional local upstream checkouts
+.upstream/
+
+# Future aggregated deployment output
+_site/
