@@ -2,7 +2,9 @@
 
 把本次讨论整理为一页中文研究网页，比较 Pixelle-Video、waoowaoo、火宝短剧和 Toonflow 的能力、原理、交互对象、实际效果、使用场景及扩展方向。点击四个项目卡片切换详情。
 
-本机预览：<http://127.0.0.1:8767/>。这是本地研究页面，尚未发布到公网；不需要模型接口或登录。服务停止后可按下方说明重新启动。
+在线入口：[四项目理解汇总](https://yydshly.github.io/0912_codex_project/007-waoowaoo/)。已于 2026-09-11 通过 GitHub Pages 部署并打开核验；不需要模型接口或登录。
+
+本机预览：<http://127.0.0.1:8767/>。服务停止后可按下方说明重新启动。
 
 ## 运行
 
@@ -33,6 +35,12 @@ python -m http.server 8767 --bind 127.0.0.1 --directory dist
 - 视频与海报：[006 真实成片](../../../006-pixelle-video/assets/cafe-demo.mp4)、[实际成片首帧](../../../006-pixelle-video/assets/composed-frame.png)。14.718667 秒，1920×1080；文案与图片由 Codex 提供，Pixelle 实际执行合成。
 - waoowaoo 截图：[原版画布与素材引用](../../assets/canvas-reference.jpg)。画布视频来自 Pixelle，助手中的需求草稿尚未发送。
 - 网页预览：[本次汇总页截图](../../assets/four-project-summary.jpg)，原创研究网页实拍。
+
+## 部署
+
+站点登记在 [统一清单](../../../../docs/web-projects.json)，由仓库 [Pages 工作流](../../../../.github/workflows/pages.yml)构建。本次首次发布：[成功运行记录](https://github.com/yydshly/0912_codex_project/actions/runs/34576193097)。
+
+本地发布检查：`python check.py`；全部子站构建完成后在仓库根目录运行 `python scripts/build_pages.py` 汇总。研究笔记见[四项目理解](../../notes/four-projects.md)。
 
 ## 检查记录
 

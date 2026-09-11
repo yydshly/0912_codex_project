@@ -16,7 +16,7 @@
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 | 005 | [OpenMAIC](projects/005-openmaic/README.md) | 资料转可执行课堂：课件、白板、实验、对话、测验与项目任务；拆解生成和调度原理，比较五产品的适用场景 | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 已总结 | [在线研究与案例](https://yydshly.github.io/0912_codex_project/005-openmaic/) |
 | 006 | [Pixelle-Video](projects/006-pixelle-video/README.md) | 真实源码实测：Codex 图片与文案，经原生配音、字幕模板和合成得到 14.7 秒短片 | [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 研究中 | [本地运行与成片](projects/006-pixelle-video/web/README.md) |
-| 007 | [waoowaoo](projects/007-waoowaoo/README.md) | v0.5 创作工作区：已实测素材导入、原版画布、图片预览和助手素材引用；附四项目理解汇总 | [waooAI/waoowaoo](https://github.com/waooAI/waoowaoo) | 研究中 | [四项目汇总网页](projects/007-waoowaoo/web/summary/README.md) · [原版运行](projects/007-waoowaoo/web/README.md) |
+| 007 | [waoowaoo](projects/007-waoowaoo/README.md) | v0.5 创作工作区：已实测素材导入、原版画布、图片预览和助手素材引用；附四项目理解汇总 | [waooAI/waoowaoo](https://github.com/waooAI/waoowaoo) | 研究中 | [四项目在线汇总](https://yydshly.github.io/0912_codex_project/007-waoowaoo/) · [原版运行](projects/007-waoowaoo/web/README.md) |
 
 ## 项目图览
 
@@ -76,7 +76,7 @@
 
 ![waoowaoo 原版画布中的两张图片和视频，以及引用拿铁图片的助手输入草稿](projects/007-waoowaoo/assets/canvas-reference.jpg)
 
-另附[四个 AI 视频项目的理解汇总网页](projects/007-waoowaoo/web/summary/README.md)：对照 Pixelle-Video、waoowaoo、火宝短剧和 Toonflow 的能力、原理、场景与扩展方向，区分真实演示和官方资料；本地可运行，尚未发布。
+另附[四个 AI 视频项目的理解汇总网页](projects/007-waoowaoo/web/summary/README.md)：对照 Pixelle-Video、waoowaoo、火宝短剧和 Toonflow 的能力、原理、场景与扩展方向，区分真实演示和官方资料；[在线阅读](https://yydshly.github.io/0912_codex_project/007-waoowaoo/)（GitHub Pages 已部署）。
 
 ## 仓库结构
 

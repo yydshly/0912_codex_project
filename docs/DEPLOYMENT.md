@@ -1,6 +1,6 @@
 # 多项目 Web 演示部署约定
 
-本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32、005 OpenMAIC 已发布，并在 2026-09-11 通过远端工作流与在线访问核验。
+本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32、005 OpenMAIC、007 AI 视频四项目汇总已发布，并在 2026-09-11 通过远端工作流与在线访问核验。
 
 Jan 项目已增加静态研究页面及独立构建说明，尚未发布站点。页面入口和运行方式见 [001 · Jan Web](../projects/001-jan/web/README.md)。本文件继续约定多项目目录和地址组织方式。
 
@@ -13,6 +13,7 @@ Jan 项目已增加静态研究页面及独立构建说明，尚未发布站点�
 | 研究页面总入口 | [研究页面总入口](https://yydshly.github.io/0912_codex_project/) |
 | 004 小智 ESP32 | [小智在线研究页面](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 | 005 OpenMAIC | [能力与研究总览](https://yydshly.github.io/0912_codex_project/005-openmaic/) · [欧姆定律互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html) |
+| 007 AI 视频四项目汇总 | [能力、原理、交互及真实演示](https://yydshly.github.io/0912_codex_project/007-waoowaoo/) |
 
 004 的源码和运行步骤见 [小智 Web 说明](../projects/004-xiaozhi-esp32/web/README.md)。本地构建后可运行：
 
@@ -34,6 +35,12 @@ python -m http.server 8764 --bind 127.0.0.1 --directory _site
 GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`）。工作流仅请求读取仓库内容、写 Pages 和签发部署身份所需权限。没有自定义域名、付费托管或前端密钥。
 
 发布完成后，可在与线上一致的干净检出中运行 `python scripts/check_pages.py`，检查 HTTP 状态和全部发布文件内容是否与 `_site/` 一致。文本换行会归一化，图片等二进制内容逐字节校验。
+
+## 007 AI 视频四项目汇总
+
+源码为 `projects/007-waoowaoo/web/summary/public`。执行该目录的 `build.py` 和 `check.py`，再汇总到 `_site/007-waoowaoo/`。仅发布研究网页、Pixelle 实际成片和演示截图，原版 Pixelle / waoowaoo 服务仍在本机运行。构建不依赖上游源码、模型服务或本地账号配置。
+
+首次发布于 2026-09-11，[部署工作流成功](https://github.com/yydshly/0912_codex_project/actions/runs/34576193097)，已实际打开在线页面。
 
 ## 后续接入新项目
 

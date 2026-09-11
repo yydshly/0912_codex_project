@@ -38,7 +38,7 @@
 
 二者可复用相近的模型服务，但内部长期保存的对象、流程调度、编辑方式和用户控制点不同，因此不能把差异全部理解成上层界面的细微变化。
 
-[四项目理解汇总网页](web/summary/README.md) · [四项目理解笔记](notes/four-projects.md) · [两项目实测对比](notes/comparison.md) · [运行说明](web/README.md) · [实测边界](notes/README.md) · [素材来源](assets/README.md)
+[四项目在线汇总](https://yydshly.github.io/0912_codex_project/007-waoowaoo/) · [网页说明](web/summary/README.md) · [四项目理解笔记](notes/four-projects.md) · [两项目实测对比](notes/comparison.md) · [运行说明](web/README.md) · [实测边界](notes/README.md) · [素材来源](assets/README.md)
 
 ## 适用与扩展方向
 
