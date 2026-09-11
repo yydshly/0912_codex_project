@@ -54,7 +54,13 @@
 
 另有[生成与执行实验台](projects/005-openmaic/web/README.md)：六种能力均可查看生成要求、编辑产物、观察运行效果，并下载提取说明；区分本地模板、官方组件与简化执行器。 新读者先看[六能力网页呈现引导图](projects/005-openmaic/assets/six-capabilities-web-guide.png)与[全部网页导航](projects/005-openmaic/notes/08-web-guide.md)。
 
+**引导图一：能力总览**
+
 ![OpenMAIC 能力总览：备课生成，课件、白板、实验、对话、测验和项目任务，以及课程编辑导出；AI 辅助绘制的示意图](projects/005-openmaic/assets/capability-overview.png)
+
+**引导图二：生成内容与网页呈现**
+
+![OpenMAIC 六能力网页呈现引导：课件、白板、实验、对话、测验和任务各自生成什么，网页如何呈现，以及程序的执行职责](projects/005-openmaic/assets/six-capabilities-web-guide.png)
 
 ## 仓库结构
 
