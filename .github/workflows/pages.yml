@@ -48,6 +48,11 @@ jobs:
           python projects/005-openmaic/web/build.py
           python projects/005-openmaic/web/check.py
           node --check projects/005-openmaic/web/public/app.js
+      - name: Build and check AI video comparison
+        run: |
+          python projects/007-waoowaoo/web/summary/build.py
+          python projects/007-waoowaoo/web/summary/check.py
+          node --check projects/007-waoowaoo/web/summary/public/app.js
       - name: Assemble all registered sites
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

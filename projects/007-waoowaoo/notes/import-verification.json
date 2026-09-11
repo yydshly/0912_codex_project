@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-11",
+  "projectId": "aab58d7d-638f-4a51-81be-d96a332a0092",
+  "verification": "Authenticated native API; TLS checked with installation public CA",
+  "resources": [
+    {
+      "name": "01-清晨咖啡店",
+      "mediaType": "image",
+      "status": "ready",
+      "version": 1,
+      "bytes": 4211120,
+      "sha256": "916d52868e4d6f9dc034023cf46d1801c796820885c5a133d66a12b6d140aa1f",
+      "retrievalVerified": true
+    },
+    {
+      "name": "02-窗边拿铁",
+      "mediaType": "image",
+      "status": "ready",
+      "version": 1,
+      "bytes": 3835751,
+      "sha256": "ed00fc685e57287839ba84ac756b2187648b67fa8e55a097f717c8edcc99c5ce",
+      "retrievalVerified": true
+    },
+    {
+      "name": "03-Pixelle-实际合成短片",
+      "mediaType": "video",
+      "status": "ready",
+      "version": 1,
+      "bytes": 1305882,
+      "sha256": "bf1ebb34fdb82398938c5049fb5fd706b182af234eb3870170e3247500fffbd3",
+      "retrievalVerified": true
+    }
+  ]
+}

@@ -12,5 +12,12 @@
     "upstream": "https://github.com/THU-MAIC/OpenMAIC",
     "description": "把资料变成可执行课堂：课件、白板、实验、角色对话、测验与项目任务；附底层原理、五产品场景选型和欧姆定律案例。",
     "output": "projects/005-openmaic/web/dist"
+  },
+  {
+    "slug": "007-waoowaoo",
+    "title": "007 · AI 视频四项目理解汇总",
+    "upstream": "https://github.com/waooAI/waoowaoo",
+    "description": "对照 Pixelle-Video、waoowaoo、火宝短剧与 Toonflow 的能力、原理、交互和适用场景，附真实成片与操作截图。",
+    "output": "projects/007-waoowaoo/web/summary/dist"
   }
 ]

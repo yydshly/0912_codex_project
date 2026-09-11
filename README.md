@@ -15,6 +15,8 @@
 | 003 | [last30days-skill](projects/003-last30days-skill/README.md) | 预先接入平台并实现各平台取数方式，再按用户问题编排搜索、补取正文 / 评论 / 字幕，整理为研究报告 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 研究中 | — |
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 | 005 | [OpenMAIC](projects/005-openmaic/README.md) | 资料转可执行课堂：课件、白板、实验、对话、测验与项目任务；拆解生成和调度原理，比较五产品的适用场景 | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 已总结 | [在线研究与案例](https://yydshly.github.io/0912_codex_project/005-openmaic/) |
+| 006 | [Pixelle-Video](projects/006-pixelle-video/README.md) | 真实源码实测：Codex 图片与文案，经原生配音、字幕模板和合成得到 14.7 秒短片 | [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 研究中 | [本地运行与成片](projects/006-pixelle-video/web/README.md) |
+| 007 | [waoowaoo](projects/007-waoowaoo/README.md) | v0.5 创作工作区：已实测素材导入、原版画布、图片预览和助手素材引用；附四项目理解汇总 | [waooAI/waoowaoo](https://github.com/waooAI/waoowaoo) | 研究中 | [四项目汇总网页](projects/007-waoowaoo/web/summary/README.md) · [原版运行](projects/007-waoowaoo/web/README.md) |
 
 ## 项目图览
 
@@ -61,6 +63,20 @@
 **引导图二：生成内容与网页呈现**
 
 ![OpenMAIC 六能力网页呈现引导：课件、白板、实验、对话、测验和任务各自生成什么，网页如何呈现，以及程序的执行职责](projects/005-openmaic/assets/six-capabilities-web-guide.png)
+
+### 006 · [Pixelle-Video](projects/006-pixelle-video/README.md)
+
+**从文案与图片到可播放短片。** 本次 Codex 生成素材，真实 Pixelle 源码执行 Edge TTS、HTML 字幕模板和 FFmpeg 合成；已在原版历史页播放。没有验证应用内模型生成动态视频。[播放成片](projects/006-pixelle-video/assets/cafe-demo.mp4) · [运行说明](projects/006-pixelle-video/web/README.md)。下图为实际成片首帧。
+
+![Pixelle 实际成片：咖啡店图片、标题和中文字幕](projects/006-pixelle-video/assets/composed-frame.png)
+
+### 007 · [waoowaoo](projects/007-waoowaoo/README.md)
+
+**以 Assistant、画布和资源版本组织持续创作。** v0.5.0-beta.1 已实际登录，验证画布、图片预览和将图片引用到助手；两张图片与 Pixelle 成片已导入并读回校验。下图为原版页面实拍，右侧是尚未提交的创作需求草稿；应用内模型生成尚未验证。[两产品差异](projects/007-waoowaoo/notes/comparison.md) · [实测记录](projects/007-waoowaoo/notes/README.md)。
+
+![waoowaoo 原版画布中的两张图片和视频，以及引用拿铁图片的助手输入草稿](projects/007-waoowaoo/assets/canvas-reference.jpg)
+
+另附[四个 AI 视频项目的理解汇总网页](projects/007-waoowaoo/web/summary/README.md)：对照 Pixelle-Video、waoowaoo、火宝短剧和 Toonflow 的能力、原理、场景与扩展方向，区分真实演示和官方资料；本地可运行，尚未发布。
 
 ## 仓库结构
 

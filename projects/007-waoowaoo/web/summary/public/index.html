@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>四个 AI 视频项目 · 理解汇总</title><meta name="description" content="从真实演示与官方资料理解 Pixelle-Video、waoowaoo、火宝短剧与 Toonflow 的能力、交互、原理和边界。"><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header><a class="brand" href="#main"><span class="brand-icon">▥</span> 开源项目研究集</a><nav aria-label="页面导航"><a href="#projects">四项目对照</a><a href="#evidence">真实效果</a><a href="#understanding">理解总结</a></nav><span class="date">2026.09.11 · 初步整理</span></header>
+<main id="main">
+<section class="intro"><p class="eyebrow">AI VIDEO / RESEARCH NOTES</p><h1>同样调用模型，<br class="mobile-break">做的却是不同的创作工作。</h1><p class="lead">四个项目可以共用相近的生成模型。真正的差异，在于它们如何组织<strong>文案、素材、分镜、剧集和修改过程</strong>。</p><div class="legend"><span class="badge verified">2 个项目已局部实测</span><span class="badge documented">2 个项目已核对官方资料</span><span>本文不对生成画质或成片质量排名。</span></div></section>
+
+<section id="projects" aria-labelledby="projects-title"><div class="section-head"><div><p class="eyebrow">01 / 一眼看懂定位</p><h2 id="projects-title">先看它把什么事情做顺了</h2></div><span class="subtle">点击项目，查看具体能力与边界</span></div>
+<div class="project-tabs" role="tablist" aria-label="选择研究项目">
+<button id="tab-pixelle" role="tab" aria-selected="true" aria-controls="project-detail" data-project="pixelle" class="project-card selected"><span class="project-num">01 <small>短视频流程</small></span><strong>Pixelle-Video</strong><span class="card-title">把文案做成短视频</span><span class="card-desc">分镜、配音、字幕模板与合成</span><span class="badge verified">合成与播放已实测</span></button>
+<button id="tab-wao" role="tab" aria-selected="false" aria-controls="project-detail" data-project="wao" class="project-card" tabindex="-1"><span class="project-num">02 <small>素材创作工作区</small></span><strong>waoowaoo</strong><span class="card-title">围绕素材反复创作</span><span class="card-desc">画布、素材引用与助手交互</span><span class="badge verified">画布与引用已实测</span></button>
+<button id="tab-huobao" role="tab" aria-selected="false" aria-controls="project-detail" data-project="huobao" class="project-card" tabindex="-1"><span class="project-num">03 <small>剧集制作流程</small></span><strong>火宝短剧</strong><span class="card-title">按剧集推进制作</span><span class="card-desc">剧本、角色、镜头任务与导出</span><span class="badge documented">官方资料 · 未运行</span></button>
+<button id="tab-toon" role="tab" aria-selected="false" aria-controls="project-detail" data-project="toon" class="project-card" tabindex="-1"><span class="project-num">04 <small>短剧创作工作台</small></span><strong>Toonflow</strong><span class="card-title">把故事组织成影视内容</span><span class="card-desc">原著、编剧、生产 Agent 与画布</span><span class="badge documented">官方资料 · 未运行</span></button>
+</div>
+<article id="project-detail" role="tabpanel" aria-labelledby="tab-pixelle" tabindex="0"></article>
+</section>
+
+<section id="evidence"><div class="section-head"><div><p class="eyebrow">02 / 我们实际看到了什么</p><h2>演示结果，和它能证明的事情</h2></div></div><div class="evidence-grid">
+<article class="evidence"><div class="evidence-top"><span class="badge verified">真实合成结果</span><span>Pixelle-Video</span></div><video controls playsinline preload="metadata" poster="assets/pixelle-frame.png" aria-label="Pixelle 实际合成的咖啡店短片"><source src="assets/cafe-demo.mp4" type="video/mp4">浏览器不支持播放，请使用下方下载链接。</video><div class="evidence-copy"><h3>14.7 秒 · 图片 + 中文口播 + 字幕</h3><p>文案和两张图片由当前 Codex 提供。Pixelle 实际完成配音、模板排版、片段合成与历史保存。</p><p class="limit">证明了基础成片流程；没有证明应用内图像生成、动态镜头、数字人或动作迁移的效果。</p><a href="assets/cafe-demo.mp4" download>下载本次成片 ↗</a></div></article>
+<article class="evidence"><div class="evidence-top"><span class="badge verified">原版页面实拍</span><span>waoowaoo</span></div><a class="screenshot-link" href="assets/wao-canvas.jpg" target="_blank" rel="noopener"><img src="assets/wao-canvas.jpg" alt="waoowaoo 原版画布：两张图片与导入短片，右侧助手引用了拿铁图片并保留创作草稿" loading="lazy"><span>查看完整截图 ↗</span></a><div class="evidence-copy"><h3>选中图片，把它引用到助手</h3><p>已实际完成登录、素材导入、画布查看、图片预览、视频播放和图片引用。右侧是尚未发送的需求草稿。</p><p class="limit">画布中的视频来自 Pixelle。waoowaoo 本次没有生成新动态视频，也未验证生成结果的多版本编辑。</p></div></article>
+</div><p class="evidence-note">火宝与 Toonflow 尚未本地运行。它们的官方功能和演示只作为资料证据，不能与我们的实测结果等同。</p></section>
+
+<section id="comparison"><div class="section-head"><div><p class="eyebrow">03 / 差异对照</p><h2>共用模型，不等于制作流程通用</h2></div></div><div class="table-scroll" tabindex="0" role="region" aria-label="四项目差异表，可横向滚动"><table><caption class="sr-only">四个项目的主要对象、交互方式、输出及实测程度</caption><thead><tr><th scope="col">比较维度</th><th scope="col">Pixelle-Video</th><th scope="col">waoowaoo</th><th scope="col">火宝短剧</th><th scope="col">Toonflow</th></tr></thead><tbody>
+<tr><th scope="row">围绕什么工作</th><td>文案、旁白、分镜模板</td><td>项目素材、参考图、资源版本</td><td>剧集、角色、场景、镜头任务</td><td>原著事件、剧本、分镜与生产节点</td></tr>
+<tr><th scope="row">主要交互</th><td>配置流程 → 生成 → 回看</td><td>选素材 → 提要求 → 检查与修改</td><td>按制作阶段推进、审核与批量生成</td><td>编剧 / 生产 Agent + 画布编排</td></tr>
+<tr><th scope="row">主要交付物</th><td>按模板组织好的短视频</td><td>可继续引用和加工的图片 / 视频资源</td><td>镜头片段与整集成片</td><td>结构化剧本、镜头素材与成片</td></tr>
+<tr><th scope="row">语音与拼接</th><td>配音、字幕、拼接已实测</td><td>此预览未包含音乐 / 配音控件</td><td>官方说明支持分镜合成与整集导出</td><td>官方说明支持视频拼接与导出</td></tr>
+<tr><th scope="row">本次验证</th><td><span class="status">已合成并播放</span></td><td><span class="status">已操作画布与引用</span></td><td>资料核对；未运行</td><td>资料核对；未运行</td></tr>
+</tbody></table></div><p class="small">“支持”不代表本次已跑通。动态视频的质量、速度、成本，以及跨镜头角色一致性，都没有在同模型、同输入条件下做过对照测试。</p></section>
+
+<section id="principles"><div class="section-head"><div><p class="eyebrow">04 / 技术理解</p><h2>共同底座之上，是不同的工作组织方式</h2></div></div><div class="layers"><article><span>01</span><h3>创作意图</h3><p>一句想法、一段文案、一本小说，或“修改这张图”。</p></article><article class="layer-focus"><span>02 · 差异集中在这里</span><h3>产品组织与执行</h3><p>把意图变成分镜、资源或剧集；管理任务、引用、版本、审核与导出。</p></article><article><span>03</span><h3>模型与媒体工具</h3><p>语言模型理解和规划，图像 / 视频模型生成素材，媒体工具负责合成。</p></article></div><p class="principle-note">替换模型接口，主要改变“用谁生成”。从口播流水线改成短剧工作台，还需要改变数据结构、执行流程和交互控制点。</p></section>
+
+<section id="understanding"><div class="section-head"><div><p class="eyebrow">05 / 我们形成的理解</p><h2>保留这四个判断，就不容易混淆</h2></div></div><div class="takeaways">
+<article><span>01</span><div><h3>“文本驱动视频”描述了入口，但没有解释产品</h3><p>还要问：中间保存什么？用户在哪里修改？最后交付的是素材、镜头，还是整集视频？</p></div></article>
+<article><span>02</span><div><h3>图片配口播，是本次 Pixelle 样例的形式</h3><p>它还有动态视频等入口；那些能力需要相应模型服务，不能用当前样片判断上限，也不能只看入口就说效果已验证。</p></div></article>
+<article><span>03</span><div><h3>waoowaoo 适合把明确的小目标逐步做好</h3><p>这是根据本次交互作出的判断。例如选图、改光线、做一个镜头，再检查结果。“小目标”指每轮任务范围；我们没有证据把它定义成只能制作短片。</p></div></article>
+<article><span>04</span><div><h3>长剧情需要额外的制作组织</h3><p>火宝和 Toonflow 在官方流程中更明确地组织剧本、角色与分镜。这值得进一步验证；有这些模块，并不自动保证故事质量或角色一致性。</p></div></article>
+</div></section>
+
+<section id="sources"><div class="section-head"><div><p class="eyebrow">06 / 证据与版本</p><h2>这份理解基于什么</h2></div></div><div class="source-grid">
+<a href="https://github.com/ATH-MaaS/Pixelle-Video/tree/848b054e4fae40dabc62ec58e960b573e83793ac" target="_blank" rel="noopener"><strong>Pixelle-Video ↗</strong><span>0.2.0 · 848b054</span><small>源码阅读 + 本地原生合成实测</small></a>
+<a href="https://github.com/waooAI/waoowaoo/tree/6cbbe22cc6492159e0f649d507e4e21a9aec3074" target="_blank" rel="noopener"><strong>waoowaoo ↗</strong><span>v0.5.0-beta.1 · 6cbbe22</span><small>源码阅读 + 本地画布和素材操作</small></a>
+<a href="https://github.com/chatfire-AI/huobao-drama/blob/27cbab93968971230858149e5be0ff4b2f857c1c/README.md" target="_blank" rel="noopener"><strong>火宝短剧 ↗</strong><span>README · 27cbab9</span><small>固定提交的官方资料；未本地运行</small></a>
+<a href="https://github.com/HBAI-Ltd/Toonflow-app/blob/e03cf590eb0cab63534a4040db9acb4ec95b42a6/README.md" target="_blank" rel="noopener"><strong>Toonflow ↗</strong><span>README · e03cf59</span><small>固定提交的官方资料；未本地运行</small></a>
+</div><p class="small">项目迭代很快，尤其 waoowaoo 的旧教程与本次 v0.5 预览可能不同。本文只比较上述版本，不把旧版定位直接套到新版。扩展方向和使用判断均为研究建议。</p></section>
+<footer><span>从“看起来相同”，到理解每一步由谁负责。</span><span>四项目理解汇总 · 2026.09.11</span></footer>
+</main><script src="app.js"></script></body></html>
