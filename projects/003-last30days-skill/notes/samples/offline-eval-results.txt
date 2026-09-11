@@ -1,0 +1,14 @@
+OFFLINE FIXTURE REPLAY - NOT LIVE SEARCH
+Pinned upstream: ca9d415e66073b17702f385d6886934097aec0e7
+Research date: 2026-09-11
+
+fixture         | citation_grounding | recency_compliance | cluster_coherence | coverage | determinism
+----------------+--------------------+--------------------+-------------------+----------+------------
+breaking-event  | 1.000              | 1.000              | 0.533             | 1.000    | 1.000
+comparison      | 1.000              | 1.000              | 0.833             | 1.000    | 1.000
+emerging-event  | 1.000              | 1.000              | 1.000             | 1.000    | 1.000
+niche           | 1.000              | 1.000              | 1.000             | 1.000    | 1.000
+non-english-cjk | 1.000              | 1.000              | 1.000             | 1.000    | 1.000
+person          | 1.000              | 1.000              | 1.000             | 1.000    | 1.000
+tech-product    | 1.000              | 1.000              | 1.000             | 1.000    | 1.000
+AVERAGE         | 1.000              | 1.000              | 0.910             | 1.000    | 1.000

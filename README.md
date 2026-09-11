@@ -12,6 +12,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [Jan](projects/001-jan/README.md) | 类 ChatGPT 的开源桌面 App：组织上下文、接入本地或云端模型并执行工具；附架构研究与 Web 页面 | [janhq/jan](https://github.com/janhq/jan) | 研究中 | — |
 | 002 | [Follow Builders](projects/002-follow-builders/README.md) | 预设平台上的账号、节目、网站及对应抓取方式，采集解析后由 AI 整理为可阅读、可推送的简报 | [zarazhangrui/follow-builders](https://github.com/zarazhangrui/follow-builders) | 已总结 | — |
+| 003 | [last30days-skill](projects/003-last30days-skill/README.md) | 预先接入平台并实现各平台取数方式，再按用户问题编排搜索、补取正文 / 评论 / 字幕，整理为研究报告 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 研究中 | — |
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 
 ## 项目图览
@@ -31,6 +32,12 @@
 下图列出 26 个 X 账号、6 个播客节目和 2 个博客栏目。播客经 RSS 与转录服务取文本，YouTube 用于匹配观看链接。原创源码示意，真实采集与推送尚未端到端验证。
 
 ![Follow Builders：全部 34 个关注对象、定位方式及获取解析路径](projects/002-follow-builders/assets/source-map.png)
+
+### 003 · [last30days-skill](projects/003-last30days-skill/README.md)
+
+核心是提前实现「平台 → 接入与取数方式」的映射，运行时由模型理解问题、结合规则编排已有能力，再清洗证据并生成回答。[理解总结](projects/003-last30days-skill/notes/06-understanding.md) · [各平台获取方式](projects/003-last30days-skill/notes/03-source-and-content-matrix.md)。原创架构示意；已核对固定源码并运行离线评估，真实多源联网效果待验证。
+
+![last30days 一页原理图：用户提问、模型理解、平台与对应取数方式、反馈清洗及展示](projects/003-last30days-skill/assets/question-to-report.png)
 
 ### 004 · [小智 ESP32](projects/004-xiaozhi-esp32/README.md)
 

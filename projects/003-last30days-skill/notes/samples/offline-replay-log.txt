@@ -1,0 +1,62 @@
+[Planner] Plan: intent=breaking_news, freshness=strict_recent, cluster_mode=story, subqueries=1, source=external
+[Planner]   sq1 label=primary search="aurora" sources=[grounding,hackernews]
+[HN] Searching for 'aurora' (raw: 'aurora', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=breaking_news, freshness=strict_recent, cluster_mode=story, subqueries=1, source=external
+[Planner]   sq1 label=primary search="aurora" sources=[grounding,hackernews]
+[HN] Searching for 'aurora' (raw: 'aurora', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=comparison, freshness=balanced_recent, cluster_mode=debate, subqueries=1, source=external
+[Planner]   sq1 label=primary search="novadb" sources=[grounding,hackernews]
+[HN] Searching for 'novadb' (raw: 'novadb', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=comparison, freshness=balanced_recent, cluster_mode=debate, subqueries=1, source=external
+[Planner]   sq1 label=primary search="novadb" sources=[grounding,hackernews]
+[HN] Searching for 'novadb' (raw: 'novadb', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=breaking_news, freshness=strict_recent, cluster_mode=story, subqueries=1, source=external
+[Planner]   sq1 label=primary search="lunar" sources=[grounding,hackernews]
+[HN] Searching for 'lunar' (raw: 'lunar', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=breaking_news, freshness=strict_recent, cluster_mode=story, subqueries=1, source=external
+[Planner]   sq1 label=primary search="lunar" sources=[grounding,hackernews]
+[HN] Searching for 'lunar' (raw: 'lunar', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=concept, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="crdt" sources=[grounding,hackernews]
+[HN] Searching for 'crdt' (raw: 'crdt', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=concept, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="crdt" sources=[grounding,hackernews]
+[HN] Searching for 'crdt' (raw: 'crdt', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=concept, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="�ձ��Z" sources=[grounding,hackernews]
+[HN] Searching for '�ձ��Z' (raw: '�ձ��Z', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[HN] Prefix filter removed 1/3 false-positive hits for '�ձ��Z'
+[Planner] Plan: intent=concept, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="�ձ��Z" sources=[grounding,hackernews]
+[HN] Searching for '�ձ��Z' (raw: '�ձ��Z', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[HN] Prefix filter removed 1/3 false-positive hits for '�ձ��Z'
+[Planner] Plan: intent=opinion, freshness=balanced_recent, cluster_mode=debate, subqueries=1, source=external
+[Planner]   sq1 label=primary search="maya" sources=[grounding,hackernews]
+[HN] Searching for 'maya' (raw: 'maya', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=opinion, freshness=balanced_recent, cluster_mode=debate, subqueries=1, source=external
+[Planner]   sq1 label=primary search="maya" sources=[grounding,hackernews]
+[HN] Searching for 'maya' (raw: 'maya', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Planner] Plan: intent=product, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="nimbus" sources=[grounding,hackernews]
+[Web] relevance prune dropped 2 of 3 items below the relevance/engagement floor
+[HN] Searching for 'nimbus' (raw: 'nimbus', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Hacker News] relevance prune dropped 2 of 3 items below the relevance/engagement floor
+[Planner] Plan: intent=product, freshness=balanced_recent, cluster_mode=none, subqueries=1, source=external
+[Planner]   sq1 label=primary search="nimbus" sources=[grounding,hackernews]
+[Web] relevance prune dropped 2 of 3 items below the relevance/engagement floor
+[HN] Searching for 'nimbus' (raw: 'nimbus', since 2026-06-10, count=15)
+[HN] Found 3 stories
+[Hacker News] relevance prune dropped 2 of 3 items below the relevance/engagement floor

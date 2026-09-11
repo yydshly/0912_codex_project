@@ -1,0 +1,25 @@
+{
+  "intent": "product",
+  "freshness_mode": "balanced_recent",
+  "cluster_mode": "none",
+  "raw_topic": "Nimbus Agent workflows",
+  "subqueries": [
+    {
+      "label": "primary",
+      "search_query": "nimbus",
+      "ranking_query": "What recent evidence matters for Nimbus Agent workflows?",
+      "sources": [
+        "grounding",
+        "hackernews"
+      ],
+      "weight": 1
+    }
+  ],
+  "source_weights": {
+    "grounding": 1,
+    "hackernews": 1
+  },
+  "notes": [
+    "eval-fixture-plan"
+  ]
+}
