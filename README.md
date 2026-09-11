@@ -52,7 +52,7 @@
 
 附[欧姆定律八环节案例](projects/005-openmaic/notes/05-case-study.md)：官方课件组件配合可操作实验、规则测验与设计任务；角色对话为预设脚本。[在线研究](https://yydshly.github.io/0912_codex_project/005-openmaic/) · [进入互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html) · [Web 运行说明](projects/005-openmaic/web/README.md)（GitHub Pages 已部署）。下图为原创能力图；已核对固定源码，完整应用生成链路未运行。
 
-另有[生成与执行实验台](projects/005-openmaic/web/README.md)：六种能力均可查看生成要求、编辑产物、观察运行效果，并下载提取说明；区分本地模板、官方组件与简化执行器。
+另有[生成与执行实验台](projects/005-openmaic/web/README.md)：六种能力均可查看生成要求、编辑产物、观察运行效果，并下载提取说明；区分本地模板、官方组件与简化执行器。 新读者先看[六能力网页呈现引导图](projects/005-openmaic/assets/six-capabilities-web-guide.png)与[全部网页导航](projects/005-openmaic/notes/08-web-guide.md)。
 
 ![OpenMAIC 能力总览：备课生成，课件、白板、实验、对话、测验和项目任务，以及课程编辑导出；AI 辅助绘制的示意图](projects/005-openmaic/assets/capability-overview.png)
 

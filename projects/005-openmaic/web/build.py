@@ -22,6 +22,7 @@ ROUTES = {
     PROJECT / 'notes/05-case-study.md': 'docs/case-study.html',
     PROJECT / 'notes/06-module-principles.md': 'docs/module-principles.html',
     PROJECT / 'notes/07-understanding.md': 'docs/understanding.html',
+    PROJECT / 'notes/08-web-guide.md': 'docs/web-guide.html',
     PROJECT / 'assets/README.md': 'docs/assets.html',
     WEB / 'README.md': 'docs/web.html',
     WEB / 'validation.md': 'docs/web-validation.html',
@@ -46,7 +47,7 @@ def rewrite_links(html, source, output):
         resolved = (source.parent / unquote(parsed.path)).resolve()
         if resolved in ROUTES:
             target = OUT / ROUTES[resolved]
-        elif resolved.is_relative_to(PROJECT / 'assets'):
+        elif resolved.is_relative_to(PROJECT / 'assets') and resolved.suffix != '.md':
             target = OUT / 'assets' / resolved.relative_to(PROJECT / 'assets')
         elif resolved in [WEB / 'dist/index.html', WEB / 'dist/case.html']:
             target = OUT / resolved.name

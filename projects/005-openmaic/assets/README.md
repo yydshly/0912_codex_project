@@ -4,6 +4,7 @@
 
 | 文件 | 展示内容 | 来源 / 作者 | 许可与验证范围 |
 | :--- | :--- | :--- | :--- |
+| [six-capabilities-web-guide.png](six-capabilities-web-guide.png) | 六项能力的生成内容、网页呈现、程序职责；解释网页、幻灯片和课件数据的关系 | 本研究策划，内置 imagegen 生成；依据[六能力引导](../notes/08-web-guide.md)，未使用外部参考图片；[生成提示词](six-capabilities-web-guide-prompt.md) | 新增 AI 辅助概念图，非官方截图、真实产品画面或完整模型生成实测证明；原有图片继续保留 |
 | [module-principles-map.png](module-principles-map.png) | 材料与大纲、六模块的生成与执行、共用运行底座、校验与失败处理 | 本研究依据[六模块源码拆解](../notes/06-module-principles.md)策划，使用 imagegen 生成并核对，2026-09-11 | AI 辅助绘制的原理示意，未使用外部参考图片；非官方截图，不代表完整生成链路已实测 |
 | [capability-overview.png](capability-overview.png) | 备课生成、课件、白板、实验、对话、测验、项目任务，以及课程编辑导出 | 本研究策划，使用 imagegen 生成并校对，2026-09-11 | AI 辅助绘制的能力示意；非官方素材、产品截图或本地全功能运行证明；未使用外部参考图片 |
 | [capability-map.svg](capability-map.svg) | 材料、课程生成、四类场景与实时课堂的关系 | 本研究原创，依据[源码地图](../notes/01-architecture.md)绘制 | 概念示意，非产品截图；不含第三方图形素材 |
