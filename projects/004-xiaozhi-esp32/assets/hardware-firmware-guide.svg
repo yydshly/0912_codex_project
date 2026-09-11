@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc"><title id="title">AI 产品硬件组成 × 小智固件能力引导图</title><desc id="desc">主板连接麦克风、功放喇叭、屏幕、电源及可选外设。CPU 执行固件，RAM 与 PSRAM 缓冲数据，Flash 保存程序。小智适配和驱动硬件并连接 AI 后端；后端负责理解与生成回答。底部是接线、适配、烧录到产品化的步骤。</desc><defs><style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#182c43}.title{font-size:38px;font-weight:700}.h{font-size:25px;font-weight:700}.body{font-size:21px}.small{font-size:18px}.label{font-size:19px;font-weight:700;fill:#075985}.white{fill:white}.muted{fill:#52677e}</style><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#57718d"/></marker><marker id="net" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8Z" fill="#0284c7"/></marker></defs>
+<rect x="0" y="0" width="1600" height="1200" rx="0" fill="#f1f5f9" stroke="none"/>
+<rect x="0" y="0" width="1600" height="156" rx="0" fill="#112a43" stroke="none"/>
+<text x="44" y="60" class="title white">AI 产品由哪些硬件组成？小智负责哪一部分？</text>
+<text x="44" y="108" class="body white">小智 ESP32 = 适配硬件的固件库 / 固件项目：烧录到主板，驱动外设并连接 AI 后端。</text>
+<rect x="24" y="178" width="1182" height="760" rx="22" fill="#e5edf5" stroke="#cbd8e5"/>
+<text x="48" y="217" class="h">设备内部 · 主板 + 外设 + 电源 + 固件 + 外壳</text>
+<text x="48" y="246" class="small muted">以 ESP32-S3 语音终端为例；模块可外接，也可集成到一块自制 PCB。</text>
+<rect x="48" y="277" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="68" y="315" class="h">① 麦克风</text>
+<text x="68" y="348" class="body">声音 → 数字音频</text>
+<text x="68" y="380" class="small muted">示例：INMP441 / I²S</text>
+<rect x="62" y="395" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="72" y="420" class="label">小智：采集、音频处理</text>
+<rect x="48" y="474" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="68" y="512" class="h">② 按键 / 可选传感器</text>
+<text x="68" y="545" class="body">触发对话 / 获取数据</text>
+<text x="68" y="577" class="small muted">GPIO / I²C；视外设而定</text>
+<rect x="62" y="592" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="72" y="617" class="label">小智：事件与工具适配</text>
+<rect x="48" y="671" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="68" y="709" class="h">③ 电源系统</text>
+<text x="68" y="742" class="body">USB 供电 → 稳压电路</text>
+<text x="68" y="774" class="small muted">电池可选，另需充电与保护</text>
+<rect x="62" y="789" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="72" y="814" class="label">小智：可适配电量 / 休眠</text>
+<rect x="898" y="277" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="918" y="315" class="h">④ 功放 → 喇叭</text>
+<text x="918" y="348" class="body">数字音频 → 可听声音</text>
+<text x="918" y="380" class="small muted">MAX98357A + 匹配的喇叭</text>
+<rect x="912" y="395" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="922" y="420" class="label">小智：解码、播放、音量</text>
+<rect x="898" y="474" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="918" y="512" class="h">⑤ 屏幕（可选）</text>
+<text x="918" y="545" class="body">字幕、表情、设备状态</text>
+<text x="918" y="577" class="small muted">OLED / 彩屏；匹配驱动</text>
+<rect x="912" y="592" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="922" y="617" class="label">小智：渲染、刷新、资源</text>
+<rect x="898" y="671" width="284" height="170" rx="14" fill="#ffffff" stroke="#cbd8e5"/>
+<text x="918" y="709" class="h">⑥ 扩展（可选）</text>
+<text x="918" y="742" class="body">摄像头 / 灯 / 电机驱动</text>
+<text x="918" y="774" class="small muted">需引脚、供电、驱动及工具</text>
+<rect x="912" y="789" width="256" height="36" rx="7" fill="#e0f2fe" stroke="none"/>
+<text x="922" y="814" class="label">小智：适配后采集 / 执行</text>
+<rect x="403" y="277" width="430" height="564" rx="18" fill="#143f45" stroke="none"/>
+<text x="426" y="320" class="h white">ESP32-S3 主板 · 控制中心</text>
+<rect x="425" y="341" width="386" height="77" rx="9" fill="#effcf8" stroke="none"/>
+<text x="440" y="370" class="body">CPU / 主控芯片</text>
+<text x="440" y="398" class="small">执行程序、调度音频、显示与外设</text>
+<rect x="425" y="430" width="386" height="77" rx="9" fill="#effcf8" stroke="none"/>
+<text x="440" y="459" class="body">RAM + PSRAM（按型号配置）</text>
+<text x="440" y="487" class="small">运行时暂存音频、图像和任务数据</text>
+<rect x="425" y="519" width="386" height="77" rx="9" fill="#effcf8" stroke="none"/>
+<text x="440" y="548" class="body">Flash（按型号配置）</text>
+<text x="440" y="576" class="small">断电后仍保存固件、资源和设置</text>
+<rect x="425" y="608" width="386" height="77" rx="9" fill="#effcf8" stroke="none"/>
+<text x="440" y="637" class="body">Wi-Fi + GPIO / I²S / I²C / SPI</text>
+<text x="440" y="665" class="small">连接网络；与外设交换数字信号</text>
+<rect x="425" y="700" width="386" height="118" rx="9" fill="#d9f0ff" stroke="none"/>
+<text x="440" y="731" class="label">运行在主板上的小智固件</text>
+<text x="440" y="762" class="small">板级适配 · 音频编解码 · 状态管理</text>
+<text x="440" y="791" class="small">联网会话 · 显示更新 · 工具执行 · OTA</text>
+<path d="M332 362 H403 M833 362 H898" fill="none" stroke="#57718d" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="345" y="344" class="small">I²S</text>
+<text x="842" y="344" class="small">I²S</text>
+<path d="M332 559 H403 M833 559 H898" fill="none" stroke="#57718d" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="345" y="541" class="small">信号</text>
+<text x="842" y="541" class="small">总线</text>
+<path d="M332 756 H403 M833 756 H898" fill="none" stroke="#57718d" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="345" y="738" class="small">供电</text>
+<text x="842" y="738" class="small">适配</text>
+<text x="49" y="879" class="body">实体连接：杜邦线 / 排针 / 插座 / 焊接 / PCB 铜线</text>
+<text x="49" y="909" class="small muted">电源分配到各模块并共地（图中省略支路）；主板是控制中心，外设与供电也必须匹配。</text>
+<rect x="1240" y="178" width="336" height="760" rx="22" fill="#e0f2fe" stroke="#93c5e7"/>
+<text x="1263" y="219" class="h">设备外部 · AI 后端</text>
+<text x="1263" y="253" class="small">官方服务 / 兼容自建服务</text>
+<rect x="1261" y="278" width="294" height="268" rx="14" fill="#ffffff" stroke="none"/>
+<text x="1280" y="319" class="h">理解与生成回答</text>
+<text x="1280" y="359" class="body">ASR：识别用户说什么</text>
+<text x="1280" y="398" class="body">LLM：理解、推理与工具</text>
+<text x="1280" y="437" class="body">TTS：生成回答语音</text>
+<text x="1280" y="478" class="small muted">也可由实时语音模型完成</text>
+<text x="1280" y="511" class="small muted">具体组合由后端决定</text>
+<path d="M1210 580 H1238" stroke="#0284c7" stroke-width="3" stroke-dasharray="6 5" marker-start="url(#net)" marker-end="url(#net)"/>
+<text x="1263" y="584" class="label">经 Wi-Fi / 互联网双向通信</text>
+<text x="1263" y="620" class="body">上传声音；返回语音、</text>
+<text x="1263" y="651" class="body">字幕、状态及工具调用</text>
+<text x="1263" y="700" class="small">小智负责端侧协议与会话：</text>
+<text x="1263" y="731" class="small">WebSocket 或 MQTT + UDP</text>
+<text x="1263" y="761" class="small">音频可使用 Opus 编解码</text>
+<rect x="1261" y="794" width="294" height="119" rx="12" fill="#112a43" stroke="none"/>
+<text x="1278" y="827" class="body white">真实 AI 能力来自后端</text>
+<text x="1278" y="859" class="small white">ESP32 不运行通用本地大模型</text>
+<text x="1278" y="890" class="small white">拟人效果来自声音、字幕与表情</text>
+<text x="44" y="991" class="h">怎样组装成产品？</text>
+<rect x="24" y="1011" width="1552" height="111" rx="14" fill="#ffffff" stroke="none"/>
+<text x="45" y="1051" class="body">选匹配硬件 → 按板级配置接线 → 选固件或修改适配 → 编译 / 烧录到 Flash → 配网与接入后端</text>
+<text x="45" y="1092" class="body">→ 验证收音、播放、显示和工具 → 整理供电、连接与外壳 → 需要时自制 PCB、完善可靠性与量产测试</text>
+<text x="44" y="1158" class="small muted">阅读方式：先看实体组件，再看蓝色“小智”能力；这是组成与职责图，精确电压及引脚见项目接线表。</text>
+<text x="44" y="1185" class="small muted">原创研究示意 · 依据 78/xiaozhi-esp32 ac6deed（2026-09-11）· 硬件与后端未实测；可选能力依赖实际适配。</text>
+</svg>

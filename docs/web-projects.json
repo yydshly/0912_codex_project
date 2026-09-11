@@ -1,0 +1,8 @@
+[
+  {
+    "slug": "004-xiaozhi-esp32",
+    "title": "004 · 小智 ESP32",
+    "description": "适配硬件的固件库：从 AI 产品硬件组成图理解主板、外设、固件与 AI 后端。",
+    "output": "projects/004-xiaozhi-esp32/web/dist"
+  }
+]

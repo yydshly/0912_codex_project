@@ -10,24 +10,15 @@
 
 | 编号 | 研究项目 | 摘要 | 原始仓库 | 研究状态 | Web 演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
-目前尚未收录研究项目。首个项目从 **001** 开始；新增方式见[维护约定](docs/CONVENTIONS.md)。
-
-<!-- 新增项目时，在表格中追加一行。以下仅为格式示例，不是真实项目：
-| 001 | [项目名称](projects/001-project-slug/README.md) | 一句话说明研究价值 | [owner/repo](https://github.com/owner/repo) | 待研究 | — |
--->
+| 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | — |
 
 ## 项目图览
 
-收录项目后，在这里按编号展示代表性截图及一句话说明，点击项目名称进入详细研究。图片统一保存在对应子项目的 `assets/` 目录。
+### 004 · [小智 ESP32](projects/004-xiaozhi-esp32/README.md)
 
-<!-- 有真实图片后再启用以下格式，避免出现失效图片：
-### 001 · [项目名称](projects/001-project-slug/README.md)
+通过真实主板与原型照片，拆解硬件、固件和 AI 后端的分工，并记录采购、接线、焊接、自制 PCB 及产品化过程。原创硬件组成与固件能力引导图；已核对固定源码，硬件与后端未实测。[本地 Web 说明](projects/004-xiaozhi-esp32/web/README.md)（未部署）。
 
-一句话说明项目特点，以及下图展示的功能。
-
-![001 项目名称：核心功能截图](projects/001-project-slug/assets/cover.png)
--->
+![AI 产品硬件组成与小智固件能力：主板及外设怎样形成能听、能说、能显示的设备](projects/004-xiaozhi-esp32/assets/hardware-firmware-guide.svg)
 
 ## 仓库结构
 

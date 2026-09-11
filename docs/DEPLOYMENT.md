@@ -1,40 +1,41 @@
 # 多项目 Web 演示部署约定
 
-当前仅初始化研究仓库，尚无 Web 演示、构建流程或已发布站点。本文件约定后续目录和地址组织方式。
+本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32 是本次登记的静态研究页面；首次发布正在验证，尚未把目标地址标为验证通过。
 
-## 源码与入口
+## 源码与发布目录
 
-每个需要演示的项目将源码放在 `projects/NNN-slug/web/`，独立记录依赖、安装命令、启动命令、构建命令及产物目录。没有演示需求的项目可以保留说明或删除空的 `web/` 模板目录。
+每个项目源码、依赖和构建说明位于 `projects/NNN-slug/web/`。已发布项目统一登记在 [站点清单](web-projects.json)，编号保持稳定；新增项目不覆盖其他项目目录。
 
-演示上线后，在根 README 和对应子项目 README 填写实际可访问的链接。GitHub 仓库中的 README 负责研究说明，Web 演示负责交互体验。
-
-## GitHub Pages 路径规划
-
-GitHub Pages 用于静态站点，每个仓库最多对应一个 Pages 站点，因此本仓库的多个演示规划为同一站点下的不同子路径。[官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
-
-| 用途 | 规划路径（尚未部署） |
+| 入口 | 发布目标 |
 | :--- | :--- |
-| 演示总入口 | `https://yydshly.github.io/0912_codex_project/` |
-| 001 号项目示例 | `https://yydshly.github.io/0912_codex_project/001-project-name/` |
-| 002 号项目示例 | `https://yydshly.github.io/0912_codex_project/002-project-name/` |
+| 研究页面总入口 | `https://yydshly.github.io/0912_codex_project/` |
+| 004 小智 ESP32 | `https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/` |
 
-后续配置部署时，将每个项目的静态构建结果汇总为一个发布目录，再统一发布：
+004 的源码和运行步骤见 [小智 Web 说明](../projects/004-xiaozhi-esp32/web/README.md)。本地构建后可运行：
 
 ```text
-_site/                       # 生成目录，不提交到源码仓库
-├── index.html               # 有序演示入口
-├── 001-project-name/        # 第一个 Web 的静态产物
-└── 002-project-name/        # 第二个 Web 的静态产物
+python scripts/build_pages.py
+python -m http.server 8764 --bind 127.0.0.1 --directory _site
 ```
 
-## 接入演示时检查
+`_site/index.html` 为有序总入口；`_site/004-xiaozhi-esp32/` 为项目站点。`_site/` 与各 `dist/` 都是生成目录，不提交；发布使用 Actions 制品。
 
-1. 根据实际技术栈配置 `/0912_codex_project/NNN-slug/` 基础路径，确保图片、脚本和样式在子路径下可加载。
-2. 单页应用选择适合静态托管的路由方式，验证刷新和直接打开内部页面的行为。
-3. 汇总所有要发布的子项目，再通过统一发布流程更新整个站点，避免仅发布一个项目时遗漏其他演示。
-4. 需要后端或私密凭据的功能使用独立服务，前端仅连接公开接口；Pages 不承载这些后端进程。
-5. 验证演示入口与主要功能后，再将地址标记为「已部署」。使用其他托管服务时，在项目内记录实际地址与更新方法。
+## 自动更新
 
-具体构建工具、工作流和托管设置，在首个 Web 项目明确后配置。
+1. 在项目目录更新正文、素材与 Web 源码，并执行其构建和必要检查。
+2. 推送到 `main` 后，[发布工作流](../.github/workflows/pages.yml)自动构建、校验并汇总所有清单内站点。
+3. 汇总脚本会检查全部登记站点是否已构建，缺失时直接失败，避免静默漏发。
+4. 工作流通过 `github-pages` 环境发布；也可在 Actions 页面手动运行该工作流。
+5. 在工作流成功且 HTTP 访问验证通过后，才将项目和根索引标记为已部署。
+
+GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`）。工作流仅请求读取仓库内容、写 Pages 和签发部署身份所需权限。没有自定义域名、付费托管或前端密钥。
+
+## 后续接入新项目
+
+在新子项目保存独立依赖与运行说明，在工作流中增加其构建和检查步骤，再按编号将其静态输出登记到站点清单。汇总脚本只复制构建结果，不统一各项目技术栈。资源使用相对路径，或配置 `/0912_codex_project/NNN-slug/` 基础路径；检查直接访问子页面和刷新行为。
+
+Pages 仅托管静态说明页面，无法在浏览器中运行 ESP32 固件、提供真实设备收音或代替 AI 后端。需要服务器的业务应另行部署。
+
+发布流程依据 [GitHub 自定义 Pages 工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)；站点设置依据 [Pages REST API](https://docs.github.com/en/rest/pages/pages)。
 
 [返回首页](../README.md)
