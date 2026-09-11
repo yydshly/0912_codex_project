@@ -26,6 +26,10 @@ node --check app.js
 
 ## 发布状态
 
-GitHub Pages 发布工作流已配置；首次远端发布与在线验证正在进行，完成后记录真实地址和结果。
+已部署至 [小智 ESP32 在线研究页面](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/)。2026-09-11 首次 [GitHub Actions 发布](https://github.com/yydshly/0912_codex_project/actions/runs/34559654464)成功；远端使用 Python 3.12 构建与检查通过。
+
+在线校验覆盖总入口、6 个项目 HTML 页面、CSS、JavaScript、6 张图片 / 图解及上游许可证，共 16 个文件。全部返回 HTTP 200，内容与发布源码的构建结果一致；文本校验仅归一化 Windows / Linux 换行。PNG 引导图也已进行独立图像查看，文字与框线完整；这不等于浏览器布局或交互测试。
+
+在发布提交对应的干净检出中完成各项目构建后，于仓库根目录执行 `python scripts/build_pages.py` 和 `python scripts/check_pages.py`，可复查线上文件。应使用与线上同一版本、同一站点清单的源码，避免把未发布的本地草稿与线上比较。后续部署记录见 [发布工作流历史](https://github.com/yydshly/0912_codex_project/actions/workflows/pages.yml)。
 
 [返回 Web 说明](README.md)

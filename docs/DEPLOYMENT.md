@@ -1,15 +1,15 @@
 # 多项目 Web 演示部署约定
 
-本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32 是本次登记的静态研究页面；首次发布正在验证，尚未把目标地址标为验证通过。
+本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32 已发布，并在 2026-09-11 通过远端工作流和在线文件校验。
 
 ## 源码与发布目录
 
 每个项目源码、依赖和构建说明位于 `projects/NNN-slug/web/`。已发布项目统一登记在 [站点清单](web-projects.json)，编号保持稳定；新增项目不覆盖其他项目目录。
 
-| 入口 | 发布目标 |
+| 入口 | 已验证在线地址 |
 | :--- | :--- |
-| 研究页面总入口 | `https://yydshly.github.io/0912_codex_project/` |
-| 004 小智 ESP32 | `https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/` |
+| 研究页面总入口 | [研究页面总入口](https://yydshly.github.io/0912_codex_project/) |
+| 004 小智 ESP32 | [小智在线研究页面](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 
 004 的源码和运行步骤见 [小智 Web 说明](../projects/004-xiaozhi-esp32/web/README.md)。本地构建后可运行：
 
@@ -29,6 +29,8 @@ python -m http.server 8764 --bind 127.0.0.1 --directory _site
 5. 在工作流成功且 HTTP 访问验证通过后，才将项目和根索引标记为已部署。
 
 GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`）。工作流仅请求读取仓库内容、写 Pages 和签发部署身份所需权限。没有自定义域名、付费托管或前端密钥。
+
+发布完成后，可在与线上一致的干净检出中运行 `python scripts/check_pages.py`，检查 HTTP 状态和全部发布文件内容是否与 `_site/` 一致。文本换行会归一化，图片等二进制内容逐字节校验。
 
 ## 后续接入新项目
 

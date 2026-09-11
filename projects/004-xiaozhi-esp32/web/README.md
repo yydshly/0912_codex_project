@@ -2,6 +2,10 @@
 
 这是本研究的交互阅读页面：AI 产品硬件组成与小智固件能力引导图、真实主板照片、组件说明、音量工具调用流程，以及由项目 README 生成的完整研究正文。它不是 ESP32 模拟器，不会打开麦克风、调用 AI 或控制硬件。
 
+**[打开在线研究页面](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/)** · [站点总入口](https://yydshly.github.io/0912_codex_project/)
+
+已通过 GitHub Pages 发布；硬件组成引导图可点击放大，也可在正文下载 PNG。
+
 ## 本地运行
 
 在本目录使用 Python 3.10 或更新版本：
@@ -23,7 +27,7 @@ python -m http.server 8764 --bind 127.0.0.1 --directory dist
 - `dist/`：自动生成的静态站点，不提交；图片来源仍以 `../assets/` 为准。
 - `.openai/hosting.json`：预留的静态发布目录声明，没有创建或虚构远端项目 ID。
 
-页面使用相对资源路径，可以放到仓库 Pages 的 `/0912_codex_project/004-xiaozhi-esp32/` 子路径。该路径将由 GitHub Actions 发布，首次发布正在验证；本页面没有密钥或运行时后端配置。
+页面使用相对资源路径，可以放到仓库 Pages 的 `/0912_codex_project/004-xiaozhi-esp32/` 子路径。该路径已由 GitHub Actions 发布并完成在线验证；本页面没有密钥或运行时后端配置。
 
 ## 验证与发布状态
 
