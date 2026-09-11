@@ -2,6 +2,8 @@
 
 网页包含可操作的「欧姆定律互动课堂」、六类能力官方示例、技术原理和同类对比。课件真实接入官方 renderer；实验和评分是案例自编程序，角色对话为预设脚本。页面不调用模型，不运行完整 OpenMAIC。
 
+**[在线研究与能力展示](https://yydshly.github.io/0912_codex_project/005-openmaic/)** · [理解汇总](https://yydshly.github.io/0912_codex_project/005-openmaic/docs/understanding.html) · [互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html) · [六模块原理](https://yydshly.github.io/0912_codex_project/005-openmaic/docs/module-principles.html)
+
 ## 查看与运行
 
 ```powershell
@@ -40,7 +42,7 @@ python -m http.server 8765 --bind 127.0.0.1 --directory projects/005-openmaic/we
 | 响应式 | 桌面两栏展示，窄屏能力按钮换行，表格独立横向滚动 |
 | 动图控制 | 支持收起与播放；减少动态效果偏好下默认不播放动图 |
 | 部署基础路径 | `/0912_codex_project/005-openmaic/`；静态资源使用相对路径 |
-| 发布状态 | 已准备 GitHub Pages 接入；尚未发布本次网页 |
+| 发布状态 | 2026-09-11 已通过 GitHub Pages 发布，工作流成功且主要页面及原理图 HTTP 200；详见验证记录 |
 | 验证记录 | [网页验证记录](validation.md) |
 
 按仓库已有[GitHub Pages 部署约定](../../../docs/DEPLOYMENT.md)构建和汇总。本页面只是研究展示；上游完整应用还需要独立后端、模型与可选服务。

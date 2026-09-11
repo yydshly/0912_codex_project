@@ -9,8 +9,15 @@
 - 完成 1 个总览、1 个互动课堂、12 份参考文档的构建（含六模块底层原理、理解汇总与场景选型）。站内链接、锚点、图片替代文本及六个能力入口检查通过。
 - 课堂模块和依赖完整打包，检查没有未打包的运行时外部模块；法律注释和已安装生产依赖许可随产物保留。总览 JavaScript 语法检查通过。
 - npm 安装完成后的审计结果为 0 个已报告漏洞；这是当时的包数据库结果，不代表未来或所有安全问题。
-- 本地 HTTP 案例页面及主要资源已检查；公网尚未发布，不把预期部署地址标记为可用。
+- 本地 HTTP 案例页面及主要资源已检查；2026-09-11 完成 GitHub Pages 发布，在线首页、案例、理解汇总、原理、比较及原理图均返回 HTTP 200。
 - GitHub Pages 流程已增加 Node.js、锁定依赖安装、案例检查与构建；总项目继续保留 004、005 两个子站。
+
+## 远端发布核验
+
+- 首次发布研究提交：[a2bfed1](https://github.com/yydshly/0912_codex_project/commit/a2bfed11c9fc94ca614224ed0f83d1e9304fe5fe)；[对应工作流](https://github.com/yydshly/0912_codex_project/actions/runs/34570237130)全部成功，包含案例检查、两项目构建和 Pages 部署。
+- 在该提交的独立干净检出中安装锁定依赖、构建两站并汇总，对线上 **379 个文件**逐个检查 HTTP 与 SHA-256，全部一致；文本换行归一化，二进制按原字节比较。覆盖总入口、004 原有页面、005 的 14 个 HTML、图片及打包依赖。这是部署文件一致性检查，不是浏览器交互测试。
+- 核验后补充了正式在线入口和本记录；后续更新继续由同一工作流发布，可在对应提交的干净检出中运行 `python scripts/check_pages.py` 复核。
+- 在线入口：[能力总览](https://yydshly.github.io/0912_codex_project/005-openmaic/) · [理解汇总](https://yydshly.github.io/0912_codex_project/005-openmaic/docs/understanding.html) · [互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html)。
 
 ## 验证边界
 
