@@ -6,7 +6,7 @@ import path from 'node:path';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const dist=path.join(root,'dist');
 await mkdir(dist,{recursive:true});
-const bundle=await build({entryPoints:{'case-app':path.join(root,'src/case.tsx')},outdir:dist,chunkNames:'chunks/[name]-[hash]',splitting:true,bundle:true,minify:true,format:'esm',platform:'browser',target:['es2022'],jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'},legalComments:'linked',metafile:true});
+const bundle=await build({entryPoints:{'case-app':path.join(root,'src/case.tsx'),'generation-app':path.join(root,'src/generation.tsx')},outdir:dist,chunkNames:'chunks/[name]-[hash]',splitting:true,bundle:true,minify:true,format:'esm',platform:'browser',target:['es2022'],jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'},legalComments:'linked',metafile:true});
 for(const [output,info] of Object.entries(bundle.metafile.outputs)){
   if(info.imports.some(x=>x.external))throw new Error('Unbundled runtime dependency in '+output);
 }

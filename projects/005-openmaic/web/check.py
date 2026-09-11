@@ -39,8 +39,8 @@ if not home or set(home.buttons) != {'interactive','lecture','discussion','quiz'
 js = (OUT/'app.js').read_text(encoding='utf-8')
 for asset in re.findall(r"'(assets/[^']+)'", js):
     if not (OUT/asset).is_file(): errors.append('Missing dynamic asset: ' + asset)
-if len(pages) != 14: errors.append('Expected showcase, interactive case and 12 reference pages')
-for required in ['styles.css','app.js','case.html','case.css','case-app.js','case-sdk.css','case-dependencies-LICENSE.txt','assets/UPSTREAM-LICENSE.txt']:
+if len(pages) != 15: errors.append('Expected showcase, interactive case, generation lab and 12 reference pages')
+for required in ['styles.css','app.js','case.html','case.css','case-app.js','generation.html','generation.css','generation-app.js','case-sdk.css','case-dependencies-LICENSE.txt','assets/UPSTREAM-LICENSE.txt']:
     if not (OUT/required).is_file(): errors.append('Missing file: ' + required)
 print({'pages':len(pages), 'local_references':count, 'errors':errors})
 if errors: raise SystemExit(1)

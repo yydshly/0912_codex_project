@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build:case": "node build-case.mjs",
-    "test:case": "node --test tests/case-model.test.mjs"
+    "test:case": "node --test tests/case-model.test.mjs tests/generation-model.test.mjs"
   },
   "dependencies": {
     "@openmaic/dsl": "0.11.1",

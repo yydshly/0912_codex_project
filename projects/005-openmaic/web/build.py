@@ -78,4 +78,4 @@ for source, route in ROUTES.items():
     output.parent.mkdir(exist_ok=True)
     output.write_text(page, encoding='utf-8')
 subprocess.run(['node', str(WEB / 'build-case.mjs')], cwd=WEB, check=True)
-print('Built OpenMAIC: 1 showcase + 1 interactive case + ' + str(len(ROUTES)) + ' reference pages')
+print('Built OpenMAIC: 1 showcase + 1 interactive case + 1 generation lab + ' + str(len(ROUTES)) + ' reference pages')
