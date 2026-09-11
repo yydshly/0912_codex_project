@@ -14,6 +14,7 @@
 | 002 | [Follow Builders](projects/002-follow-builders/README.md) | 预设平台上的账号、节目、网站及对应抓取方式，采集解析后由 AI 整理为可阅读、可推送的简报 | [zarazhangrui/follow-builders](https://github.com/zarazhangrui/follow-builders) | 已总结 | — |
 | 003 | [last30days-skill](projects/003-last30days-skill/README.md) | 预先接入平台并实现各平台取数方式，再按用户问题编排搜索、补取正文 / 评论 / 字幕，整理为研究报告 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 研究中 | — |
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
+| 005 | [OpenMAIC](projects/005-openmaic/README.md) | 资料转可执行课堂：课件、白板、实验、对话、测验与项目任务；拆解生成和调度原理，比较五产品的适用场景 | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 已总结 | — |
 
 ## 项目图览
 
@@ -44,6 +45,14 @@
 通过真实主板与原型照片，拆解硬件、固件和 AI 后端的分工，并记录采购、接线、焊接、自制 PCB 及产品化过程。原创硬件组成与固件能力引导图；已核对固定源码，硬件与后端未实测。[在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) · [Web 运行说明](projects/004-xiaozhi-esp32/web/README.md)（GitHub Pages 已部署）。
 
 ![AI 产品硬件组成与小智固件能力：主板及外设怎样形成能听、能说、能显示的设备](projects/004-xiaozhi-esp32/assets/hardware-firmware-guide.svg)
+
+### 005 · [OpenMAIC](projects/005-openmaic/README.md)
+
+**把资料变成可播放、可提问、可操作的课堂。** 特点是内容与教学动作分离、角色按轮次调度、实验代码与任务状态执行，差异超过展示界面。对比 NotebookLM、Open Notebook、SurfSense 与 DeepTutor，帮助区分资料研究、多源检索、持续辅导和互动授课的需求。[理解汇总](projects/005-openmaic/notes/07-understanding.md) · [五产品场景选型](projects/005-openmaic/notes/04-comparison.md) · [六模块底层原理](projects/005-openmaic/notes/06-module-principles.md) · [原理全图](projects/005-openmaic/assets/module-principles-map.png)。
+
+附[欧姆定律八环节案例](projects/005-openmaic/notes/05-case-study.md)：官方课件组件配合可操作实验、规则测验与设计任务；角色对话为预设脚本。[Web 本地查看](projects/005-openmaic/web/README.md)（公网未发布）。下图为原创能力图；已核对固定源码，完整应用生成链路未运行。
+
+![OpenMAIC 能力总览：备课生成，课件、白板、实验、对话、测验和项目任务，以及课程编辑导出；AI 辅助绘制的示意图](projects/005-openmaic/assets/capability-overview.png)
 
 ## 仓库结构
 

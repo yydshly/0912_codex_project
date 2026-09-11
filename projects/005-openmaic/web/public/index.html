@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenMAIC 能力实验室 · 005 开源项目研究</title>
+<meta name="description" content="查看 OpenMAIC 的课件、交互实验和项目学习官方示例，理解课堂生成原理，并与 NotebookLM、DeepTutor、Open Notebook 和 SurfSense 比较。">
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">M</span><span>OpenMAIC <small>能力实验室</small></span></a><nav aria-label="主导航"><a href="#showcase">能力展示</a><a href="#compare">同类对比</a><a href="#principle">技术原理</a><a href="docs/module-principles.html">生成与运行原理</a><a href="docs/research.html">完整研究 ↗</a></nav></header>
+<main id="main">
+<section class="intro"><div><p class="eyebrow">005 / OPEN SOURCE RESEARCH</p><h1>从一份资料，到一堂互动课。</h1><p>课件、实验、测验与项目任务，由 AI 老师和同学串成学习过程。</p></div><a class="outline-link" href="https://github.com/THU-MAIC/OpenMAIC">上游仓库 ↗</a></section>
+<section class="section" aria-labelledby="summary-title"><div class="section-heading"><div><p class="eyebrow">先读摘要</p><h2 id="summary-title">把知识组织成可执行的课堂。</h2></div><a href="docs/understanding.html">阅读我们的理解汇总 →</a></div><p>OpenMAIC 面向课程创作与互动授课，将材料生成课件、白板动作、实验网页、角色对话、测验和项目任务。特点是内容与动作分开生成，再由播放器、导演和执行程序协调运行；核心差异涉及生成协议、互动调度和反馈。</p><p>适合教师备课、科普教学、企业培训与教育产品开发。对照其他项目，是为了选择资料研究、多源检索、持续辅导或互动授课的合适方案；这份研究没有进行产品效果排名。</p><p><a href="assets/capability-overview.png">一图看全部能力 ↗</a> · <a href="assets/module-principles-map.png">一图看生成与运行原理 ↗</a> · <a href="docs/module-principles.html">逐模块追到源码 →</a></p></section>
+<section class="case-entry" aria-labelledby="case-entry-title"><div><p class="eyebrow">动手体验 / 约 10–15 分钟</p><h2 id="case-entry-title">用一堂互动课，学会欧姆定律。</h2><p>从 6 V / 300 Ω 出发：看课件、跟推导、调参数，再用测验与设计任务检验理解。</p><small>真实接入官方课件渲染组件；实验和评分由案例程序计算，对话为预设脚本。</small></div><div class="case-entry-links"><a class="case-entry-button" href="case.html">进入互动课堂 →</a><a href="docs/case-study.html">查看八环节体验路线</a></div></section>
+<section id="showcase" class="showcase" aria-labelledby="showcase-title">
+<div class="gallery-top"><h2 id="showcase-title">看看它能做什么</h2><span class="tag">官方示例 + 源码解读</span></div>
+<div class="gallery-grid">
+<div class="capability-menu" role="group" aria-label="选择能力">
+<button data-capability="interactive" aria-pressed="true"><span>01</span>交互实验<small>调参数，观察变化</small></button>
+<button data-capability="lecture" aria-pressed="false"><span>02</span>课件讲解<small>听讲解，看重点</small></button>
+<button data-capability="discussion" aria-pressed="false"><span>03</span>角色讨论<small>提问与白板回应</small></button>
+<button data-capability="quiz" aria-pressed="false"><span>04</span>测验反馈<small>答题与解释</small></button>
+<button data-capability="pbl" aria-pressed="false"><span>05</span>项目式学习<small>角色、任务与成果</small></button>
+<button data-capability="workbench" aria-pressed="false"><span>06</span>课程工作台<small>用对话继续改课</small></button>
+</div>
+<div class="capability-content" id="capability-content" aria-live="polite" aria-atomic="true">
+<div class="visual"><img id="feature-image" src="assets/official-solar-system.png" width="2142" height="1204" alt="官方太阳系公转示例：中间是实验画面，下方有速度与视角控件及老师讲解区"><div id="feature-flow" class="feature-flow" hidden></div></div>
+<div class="feature-description"><div><span id="feature-kind" class="kicker">官方截图 / 未实测</span><h3 id="feature-title">把抽象概念变成可以操作的页面</h3><p id="feature-description">太阳系示例包含速度、方向与视角控件。学生通过操作观察变化，老师可以结合页面进行引导。</p></div><div class="feature-conditions"><strong>怎样实现</strong><p id="feature-mechanism">模型生成交互网页，平台在隔离页面中运行，并通过消息通信接收老师的操作指令。</p><strong>需要什么</strong><p id="feature-boundary">生成的代码与计算公式需另外验证。这张截图只展示界面，不提供可操作的太阳系实验。</p><a id="feature-source" href="docs/architecture.html">查看实现依据 →</a><button id="motion-toggle" class="text-button" hidden>收起动图</button></div></div>
+</div></div>
+<p class="evidence-note">本页用于研究展示，不上传资料或调用 AI。官方素材不代表本次生成结果；文字流程为依据源码整理的示意。</p>
+<noscript><p>浏览器未启用 JavaScript；可以阅读当前示例及下方比较，更多能力见<a href="docs/research.html">完整研究</a>。</p></noscript>
+</section>
+<section id="compare" class="section">
+<div class="section-heading"><div><p class="eyebrow">SAME MATERIALS, DIFFERENT WORKFLOWS</p><h2>能力重叠，组织学习的方式不同。</h2></div><a href="docs/comparison.html">阅读全文与来源 →</a></div>
+<div class="three-points"><article><span>NotebookLM</span><h3>围绕资料研究与学习</h3><p>来源、引用、笔记与学习成果。适合从一组材料中获得解释和可复用内容。</p></article><article><span>DeepTutor</span><h3>围绕学习进度推进</h3><p>知识点、练习、掌握度和复习。适合研究可修改的辅导与学习状态规则。</p></article><article class="highlight"><span>OpenMAIC</span><h3>围绕课堂场景授课</h3><p>课件、教学动作与角色轮次。适合研究如何把知识演成可参与的一堂课。</p></article></div>
+<div class="table-scroll" role="region" aria-label="产品差异表，可横向滚动" tabindex="0"><table><caption>主要流程与工程差异，非效果排名</caption><thead><tr><th scope="col">比较维度</th><th scope="col">NotebookLM</th><th scope="col">DeepTutor</th><th scope="col">OpenMAIC</th></tr></thead><tbody>
+<tr><th scope="row">核心数据</th><td>来源、笔记本、对话与成果</td><td>知识点、作答、掌握度与学习路径</td><td>课程、场景、内容、动作与角色</td></tr>
+<tr><th scope="row">典型过程</th><td>选来源 → 问答 / 生成 → 回到引用</td><td>讲解 → 练习 → 判断进度 → 复习</td><td>生成课程 → 播放 → 讨论 / 实验</td></tr>
+<tr><th scope="row">交互侧重</th><td>学习引导、测验、音频互动</td><td>分步解题、工具反馈、持续学习</td><td>白板、高亮、角色调度、页面联动</td></tr>
+<tr><th scope="row">改造方式</th><td>产品开放的设置与接口</td><td>修改开源教学流程与状态规则</td><td>修改开源课程协议与执行引擎</td></tr>
+</tbody></table></div>
+<div class="table-scroll" role="region" aria-label="五产品场景选型，可横向滚动" tabindex="0"><table><caption>按首要问题选型：应用判断，能力并非互斥</caption><thead><tr><th scope="col">你首先需要什么</th><th scope="col">优先考察</th><th scope="col">比较的意义</th></tr></thead><tbody><tr><th scope="row">从论文或报告形成有来源的理解</th><td>NotebookLM / Gemini Notebook</td><td>判断使用现成产品是否已足够</td></tr><tr><th scope="row">自建资料笔记本与内容处理流程</th><td>Open Notebook</td><td>选择可控制模型和数据的研究底座</td></tr><tr><th scope="row">接入分散系统并检索资料</th><td>SurfSense</td><td>先解决资料接入与证据组织</td></tr><tr><th scope="row">持续辅导、练习和安排复习</th><td>DeepTutor</td><td>关注作答、学习状态与下一步任务</td></tr><tr><th scope="row">制作可参与的课程与培训</th><td>OpenMAIC</td><td>关注课件、动作、角色、实验和项目联动</td></tr></tbody></table></div>
+<p class="comparison-note"><strong>NotebookLM 也能互动。</strong> Google 已将它更名为 Gemini Notebook，并提供测验、Learning Guide、音频互动和逐步开放的代码执行。具体能力受账户与发布范围影响，不能用“只能总结”作为比较前提。<a href="docs/comparison.html">核对来源</a></p>
+<details class="related"><summary>如果你想到的是 Open Notebook 或 SurfSense</summary><div class="related-grid"><article><h3>Open Notebook</h3><p>围绕笔记本管理资料、笔记、对话、内容转换与播客，侧重资料研究工作台。</p></article><article><h3>SurfSense</h3><p>侧重多来源接入、混合检索、证据组织、连接器和自动化，为研究提供资料与工具。</p></article></div><p>它们与 OpenMAIC 的关系更像“找到并理解材料”与“把材料组织成课堂”。职责有重叠，项目之间并没有现成的完整互通。</p></details>
+</section>
+<section id="principle" class="section">
+<div class="section-heading"><div><p class="eyebrow">INSIDE THE CLASSROOM</p><h2>模型写内容，程序安排执行。</h2></div><a href="docs/architecture.html">源码地图 →</a></div>
+<div class="architecture"><img src="assets/capability-map.svg" width="1440" height="1000" loading="lazy" alt="OpenMAIC 原创能力图：资料进入生成流程，形成四类场景，经播放器与动作引擎呈现课堂，并通过导演调度角色"></div>
+<div class="three-points compact"><article><h3>内容与动作分开</h3><p>页面内容决定展示什么；讲解、白板和高亮动作决定何时做什么。</p></article><article><h3>导演按轮次调度</h3><p>根据课堂与对话选择角色、交还用户或结束。多个角色可共用同一个模型。</p></article><article><h3>共用动作执行层</h3><p>预生成讲解与现场回答使用同一执行引擎，让听课和提问衔接。</p></article></div>
+</section>
+<section id="use" class="section">
+<div class="section-heading"><div><p class="eyebrow">BUILD ON WHAT WE KNOW</p><h2>对我们：从项目研究，走向项目教学。</h2></div></div>
+<div class="use-path"><article><span>01</span><h3>可信材料</h3><p>把已核验的项目文档和源码引用整理成学习材料。</p></article><article><span>02</span><h3>互动课堂</h3><p>借鉴 OpenMAIC，把架构与数据流做成讲解、实验和讨论。</p></article><article><span>03</span><h3>学习反馈</h3><p>借鉴 DeepTutor，用可执行练习和作答状态决定后续学习。</p></article></div>
+<p class="evidence-note">这是建议的组合路线，尚未实现自动集成。需要连接来源引用、内容协议与学习事件。</p>
+<details><summary>实际使用时，需要核对哪些条件？</summary><ul><li>基础生成需要可调用模型；语音、媒体、解析依赖各自服务。</li><li>Pro 工作台需要启用服务端运行环境与数据库；视频导出有独立渲染服务。</li><li>代码可执行不保证学科计算正确；测验评分也需要核验，简答题解析失败有半分回退行为。</li><li>官方界面和源码实现不能直接证明教学提升、生成成功率、耗时或费用。</li></ul><a href="docs/validation.html">查看完整验证范围 →</a></details>
+</section>
+<footer><div><strong>005 · OpenMAIC 研究</strong><p>2026-09-11 · OpenMAIC 1.0.1 / d5be393<br>官方资料与固定源码分析；完整应用未实测。</p></div><nav aria-label="参考资料"><a href="docs/research.html">完整研究</a><a href="docs/comparison.html">产品对比与来源</a><a href="docs/assets.html">图片来源与许可</a><a href="docs/web.html">网页说明</a><a href="https://open.maic.chat/">上游体验入口 ↗</a></nav></footer>
+</main></body></html>

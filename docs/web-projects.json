@@ -5,5 +5,12 @@
     "upstream": "https://github.com/78/xiaozhi-esp32",
     "description": "适配硬件的固件库：从 AI 产品硬件组成图理解主板、外设、固件与 AI 后端。",
     "output": "projects/004-xiaozhi-esp32/web/dist"
+  },
+  {
+    "slug": "005-openmaic",
+    "title": "005 · OpenMAIC",
+    "upstream": "https://github.com/THU-MAIC/OpenMAIC",
+    "description": "把资料变成可执行课堂：课件、白板、实验、角色对话、测验与项目任务；附底层原理、五产品场景选型和欧姆定律案例。",
+    "output": "projects/005-openmaic/web/dist"
   }
 ]

@@ -36,6 +36,8 @@ GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`�
 
 ## 后续接入新项目
 
+005 OpenMAIC 已加入站点清单与构建流程，静态输出为 `projects/005-openmaic/web/dist`，包含能力示例、原理、同类对比，以及 `case.html` 欧姆定律互动课堂。该子项目须先安装自身 npm 依赖；Python 构建会同时调用课堂打包。当前本地已实现，公网未发布；运行与验证见 [005 Web 说明](../projects/005-openmaic/web/README.md)。其计划基础路径为 `/0912_codex_project/005-openmaic/`，发布成功并核验后再加入上方的已验证地址表。
+
 在新子项目保存独立依赖与运行说明，在工作流中增加其构建和检查步骤，再按编号将其静态输出登记到站点清单。汇总脚本只复制构建结果，不统一各项目技术栈。资源使用相对路径，或配置 `/0912_codex_project/NNN-slug/` 基础路径；检查直接访问子页面和刷新行为。
 
 Pages 仅托管静态说明页面，无法在浏览器中运行 ESP32 固件、提供真实设备收音或代替 AI 后端。需要服务器的业务应另行部署。

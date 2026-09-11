@@ -31,12 +31,23 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Build and check Xiaozhi research
         run: |
           python -m pip install -r projects/004-xiaozhi-esp32/web/requirements.txt
           python projects/004-xiaozhi-esp32/web/build.py
           python projects/004-xiaozhi-esp32/web/check.py
           node --check projects/004-xiaozhi-esp32/web/app.js
+      - name: Build and check OpenMAIC research
+        run: |
+          python -m pip install -r projects/005-openmaic/web/requirements.txt
+          npm ci --prefix projects/005-openmaic/web
+          npm run test:case --prefix projects/005-openmaic/web
+          python projects/005-openmaic/web/build.py
+          python projects/005-openmaic/web/check.py
+          node --check projects/005-openmaic/web/public/app.js
       - name: Assemble all registered sites
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

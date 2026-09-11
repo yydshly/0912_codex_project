@@ -1,0 +1,24 @@
+{
+  "name": "openmaic-research-case",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:case": "node build-case.mjs",
+    "test:case": "node --test tests/case-model.test.mjs"
+  },
+  "dependencies": {
+    "@openmaic/dsl": "0.11.1",
+    "@openmaic/renderer": "0.1.6",
+    "echarts": "6.1.0",
+    "motion": "12.27.5",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "shiki": "3.21.0",
+    "tailwindcss": "4.1.18"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.1.18",
+    "esbuild": "0.25.12"
+  }
+}

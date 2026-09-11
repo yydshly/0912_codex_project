@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+  <title id="title">OpenMAIC：从学习材料到 AI 互动课堂</title>
+  <desc id="desc">材料经过解析和大纲规划，生成页面内容与教学动作，形成课件、测验、交互实验和项目式学习四类场景。播放器与动作引擎驱动讲解；导演调度老师和同学响应提问。Pro 工作台和外部模型、语音、解析及存储服务为可选配置能力。原创源码概念图，非实测截图。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#61778b" stroke-width="1.6"/></marker>
+    <style>
+      text {font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif; fill:#173049}
+      .eyebrow {font-size:16px;letter-spacing:2px;fill:#52768b;font-weight:700}
+      .title {font-size:40px;font-weight:700}
+      .sub {font-size:20px;fill:#516a7c}
+      .h {font-size:23px;font-weight:700}
+      .p {font-size:19px;fill:#405e72}
+      .small {font-size:17px;fill:#526c7f}
+      .label {font-size:16px;font-weight:700;fill:#197267}
+      .line {fill:none;stroke:#61778b;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="1000" rx="26" fill="#f3f7fa"/>
+  <text x="60" y="55" class="eyebrow">005 / OPENMAIC · 开源项目能力研究</text>
+  <text x="60" y="115" class="title">把学习材料，变成可以参与的 AI 课堂</text>
+  <text x="60" y="153" class="sub">模型组织课程与教学动作，程序负责展示、执行和角色调度。</text>
+
+  <rect x="60" y="190" width="360" height="132" rx="16" fill="#fff" stroke="#d2dfe8"/>
+  <text x="82" y="225" class="label">01 / 输入</text>
+  <text x="82" y="262" class="h">主题与学习材料</text>
+  <text x="82" y="296" class="p">文档、图片、音视频 · 依解析器配置</text>
+  <path d="M428 255 H470" class="line"/>
+
+  <rect x="482" y="190" width="420" height="132" rx="16" fill="#e5f4ef" stroke="#badbcf"/>
+  <text x="506" y="225" class="label">02 / 生成</text>
+  <text x="506" y="262" class="h">材料解析 → 大纲 → 场景</text>
+  <text x="506" y="296" class="p">分别生成页面内容与讲解、绘图等动作</text>
+  <path d="M910 255 H954" class="line"/>
+
+  <rect x="966" y="190" width="414" height="132" rx="16" fill="#e9effd" stroke="#cbd7ee"/>
+  <text x="990" y="225" class="label">03 / 课程数据</text>
+  <text x="990" y="262" class="h">Stage / Scene</text>
+  <text x="990" y="296" class="p">内容 + 动作 · 可校验、编辑和保存</text>
+
+  <path d="M1173 330 V354 H720 V384" class="line"/>
+  <rect x="60" y="396" width="1320" height="174" rx="18" fill="#fff" stroke="#d2dfe8"/>
+  <text x="82" y="429" class="label">四类教学场景</text>
+  <path d="M388 449 V547 M718 449 V547 M1048 449 V547" stroke="#dde6ec"/>
+  <text x="84" y="482" class="h">课件讲解</text>
+  <text x="84" y="516" class="p">幻灯片、语音与重点提示</text>
+  <text x="84" y="545" class="small">让知识按顺序呈现</text>
+  <text x="412" y="482" class="h">测验反馈</text>
+  <text x="412" y="516" class="p">选择题、简答题与评语</text>
+  <text x="412" y="545" class="small">评分可靠性需要验证</text>
+  <text x="742" y="482" class="h">交互实验</text>
+  <text x="742" y="516" class="p">网页模拟、3D 与编程</text>
+  <text x="742" y="545" class="small">核心计算需要另外核验</text>
+  <text x="1072" y="482" class="h">项目式学习</text>
+  <text x="1072" y="516" class="p">角色、里程碑与交付物</text>
+  <text x="1072" y="545" class="small">围绕任务组织实践</text>
+
+  <path d="M410 578 V612" class="line"/>
+  <rect x="60" y="624" width="636" height="142" rx="16" fill="#173e54"/>
+  <text x="84" y="662" style="font-size:24px;font-weight:700;fill:#fff">课堂播放器 + 动作引擎</text>
+  <text x="84" y="701" style="font-size:20px;fill:#e3eef3">播放、暂停、现场互动 · 语音、白板和重点高亮</text>
+  <text x="84" y="738" style="font-size:18px;fill:#bdd6e0">预生成讲解与实时回答，共用动作执行层</text>
+
+  <rect x="780" y="624" width="600" height="142" rx="16" fill="#fff" stroke="#d2dfe8"/>
+  <text x="804" y="662" class="h">学生提问 → 导演 → AI 老师 / 同学</text>
+  <text x="804" y="701" class="p">结合课堂上下文，按轮次生成回答与动作</text>
+  <text x="804" y="738" class="small">多角色可共用模型，人设与允许的动作不同</text>
+  <path d="M772 710 H707" class="line"/>
+
+  <rect x="60" y="804" width="1320" height="108" rx="16" fill="#fff4df" stroke="#e7d9b5"/>
+  <text x="84" y="841" class="h">按需配置的支撑能力</text>
+  <text x="84" y="878" class="p">Pro 对话改课与会话恢复 · 模型 / 语音 / 解析 / 媒体服务 · 存储 · PPTX / HTML / 可选视频导出</text>
+  <text x="60" y="949" class="small">研究依据：OpenMAIC 1.0.1 · d5be393 · 2026-09-11 ｜ 原创源码概念图，非产品截图。</text>
+  <text x="60" y="978" class="small">已静态核对关键实现；完整应用、生成质量、交互精度和学习成效未实测。可选功能需开关与对应服务。</text>
+</svg>
