@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1550" viewBox="0 0 1600 1550" role="img" aria-labelledby="title desc">
+<title id="title">Follow Builders：来源名单、定位方式与获取解析路径</title>
+<desc id="desc">26 个 X 账号通过 handle 和 API 获取动态；6 个播客通过 RSS 发现节目、pod2txt 获取转录，YouTube 匹配观看链接；2 个博客通过栏目地址获取正文。三路形成公开 feed，再由宿主 AI 整理。</desc>
+<rect width="1600" height="1550" fill="#F5F6F2"/>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif}a:hover text{text-decoration:underline}</style>
+<text x="50" y="48" font-size="20" fill="#087B6A">FOLLOW BUILDERS  /  SOURCE MAP</text>
+<text x="48" y="124" font-size="52" fill="#193039">来源名单 → 定位 → 获取与解析</text>
+<text x="51" y="177" font-size="27" fill="#526970">34 个具体关注对象：26 个 X 账号、6 个播客节目、2 个博客栏目</text>
+<rect x="50" y="207" width="1500" height="58" rx="12" fill="#E5ECE6" stroke="none" stroke-width="2"/>
+<text x="71" y="244" font-size="22" fill="#087B6A">名单由作者在 default-sources.json 中集中设置；普通客户端读取采集后的公开 feed。</text>
+<text x="72" y="307" font-size="21" fill="#526970">关注哪些对象</text>
+<text x="830" y="307" font-size="21" fill="#526970">根据什么定位</text>
+<text x="1132" y="307" font-size="21" fill="#526970">如何获取和解析</text>
+<rect x="50" y="325" width="1500" height="390" rx="18" fill="#FFFFFF" stroke="#D7E4DC" stroke-width="2"/>
+<text x="72" y="372" font-size="29" fill="#087B6A">01  X / Twitter · 26 个账号</text>
+<a href="https://x.com/karpathy" target="_blank"><text x="76" y="418" font-size="21" fill="#193039">Andrej Karpathy</text></a>
+<a href="https://x.com/swyx" target="_blank"><text x="76" y="448" font-size="21" fill="#193039">Swyx</text></a>
+<a href="https://x.com/joshwoodward" target="_blank"><text x="76" y="478" font-size="21" fill="#193039">Josh Woodward</text></a>
+<a href="https://x.com/bcherny" target="_blank"><text x="76" y="508" font-size="21" fill="#193039">Boris Cherny</text></a>
+<a href="https://x.com/thsottiaux" target="_blank"><text x="76" y="538" font-size="21" fill="#193039">Thibault Sottiaux</text></a>
+<a href="https://x.com/petergyang" target="_blank"><text x="76" y="568" font-size="21" fill="#193039">Peter Yang</text></a>
+<a href="https://x.com/thenanyu" target="_blank"><text x="76" y="598" font-size="21" fill="#193039">Nan Yu</text></a>
+<a href="https://x.com/realmadhuguru" target="_blank"><text x="76" y="628" font-size="21" fill="#193039">Madhu Guru</text></a>
+<a href="https://x.com/AmandaAskell" target="_blank"><text x="76" y="658" font-size="21" fill="#193039">Amanda Askell</text></a>
+<a href="https://x.com/_catwu" target="_blank"><text x="323" y="418" font-size="21" fill="#193039">Cat Wu</text></a>
+<a href="https://x.com/trq212" target="_blank"><text x="323" y="448" font-size="21" fill="#193039">Thariq</text></a>
+<a href="https://x.com/GoogleLabs" target="_blank"><text x="323" y="478" font-size="21" fill="#193039">Google Labs</text></a>
+<a href="https://x.com/amasad" target="_blank"><text x="323" y="508" font-size="21" fill="#193039">Amjad Masad</text></a>
+<a href="https://x.com/rauchg" target="_blank"><text x="323" y="538" font-size="21" fill="#193039">Guillermo Rauch</text></a>
+<a href="https://x.com/alexalbert__" target="_blank"><text x="323" y="568" font-size="21" fill="#193039">Alex Albert</text></a>
+<a href="https://x.com/levie" target="_blank"><text x="323" y="598" font-size="21" fill="#193039">Aaron Levie</text></a>
+<a href="https://x.com/ryolu_" target="_blank"><text x="323" y="628" font-size="21" fill="#193039">Ryo Lu</text></a>
+<a href="https://x.com/garrytan" target="_blank"><text x="323" y="658" font-size="21" fill="#193039">Garry Tan</text></a>
+<a href="https://x.com/mattturck" target="_blank"><text x="570" y="418" font-size="21" fill="#193039">Matt Turck</text></a>
+<a href="https://x.com/zarazhangrui" target="_blank"><text x="570" y="448" font-size="21" fill="#193039">Zara Zhang</text></a>
+<a href="https://x.com/nikunj" target="_blank"><text x="570" y="478" font-size="21" fill="#193039">Nikunj Kothari</text></a>
+<a href="https://x.com/steipete" target="_blank"><text x="570" y="508" font-size="21" fill="#193039">Peter Steinberger</text></a>
+<a href="https://x.com/danshipper" target="_blank"><text x="570" y="538" font-size="21" fill="#193039">Dan Shipper</text></a>
+<a href="https://x.com/adityaag" target="_blank"><text x="570" y="568" font-size="21" fill="#193039">Aditya Agarwal</text></a>
+<a href="https://x.com/sama" target="_blank"><text x="570" y="598" font-size="21" fill="#193039">Sam Altman</text></a>
+<a href="https://x.com/claudeai" target="_blank"><text x="570" y="628" font-size="21" fill="#193039">Claude</text></a>
+<rect x="816" y="417" width="252" height="204" rx="14" fill="#EDF5EF" stroke="none" stroke-width="2"/>
+<text x="838" y="468" font-size="28" fill="#087B6A">账号 handle</text>
+<text x="838" y="511" font-size="21" fill="#526970">例如：karpathy</text>
+<text x="838" y="559" font-size="21" fill="#087B6A">↓ 解析为 X 用户 ID</text>
+<text x="838" y="595" font-size="18" fill="#526970">个人与组织账号均可</text>
+<path d="M775,521 H803 M793,515 L803,521 L793,527" fill="none" stroke="#087B6A" stroke-width="3"/>
+<path d="M1080,521 H1117 M1107,515 L1117,521 L1107,527" fill="none" stroke="#087B6A" stroke-width="3"/>
+<text x="1132" y="453" font-size="29" fill="#087B6A">X 官方 API</text>
+<text x="1132" y="500" font-size="23" fill="#193039">获取近期原创动态</text>
+<text x="1132" y="541" font-size="22" fill="#526970">提取正文、作者、时间和链接</text>
+<text x="1132" y="581" font-size="21" fill="#526970">过滤转发 / 回复，按 ID 去重</text>
+<text x="1132" y="641" font-size="22" fill="#087B6A">输出：feed-x.json</text>
+<text x="76" y="698" font-size="17" fill="#526970">全部名称来自固定来源配置；点击 SVG 中的名称可打开对应来源。</text>
+<rect x="50" y="735" width="1500" height="300" rx="18" fill="#FFFFFF" stroke="#D5DFEE" stroke-width="2"/>
+<text x="72" y="783" font-size="29" fill="#285EAB">02  播客 · 6 个节目</text>
+<a href="https://www.youtube.com/@LatentSpacePod" target="_blank"><text x="76" y="833" font-size="22" fill="#193039">Latent Space</text></a>
+<a href="https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8" target="_blank"><text x="76" y="896" font-size="22" fill="#193039">Training Data</text></a>
+<a href="https://www.youtube.com/@NoPriorsPodcast" target="_blank"><text x="76" y="959" font-size="22" fill="#193039">No Priors</text></a>
+<a href="https://www.youtube.com/@RedpointAI" target="_blank"><text x="434" y="833" font-size="22" fill="#193039">Unsupervised Learning</text></a>
+<a href="https://www.youtube.com/@DataDrivenNYC/videos" target="_blank"><text x="434" y="896" font-size="22" fill="#193039">The MAD Podcast with Matt</text></a>
+<a href="https://www.youtube.com/@DataDrivenNYC/videos" target="_blank"><text x="434" y="923" font-size="22" fill="#193039">Turck</text></a>
+<a href="https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL" target="_blank"><text x="434" y="959" font-size="22" fill="#193039">AI &amp; I by Every</text></a>
+<rect x="816" y="790" width="252" height="193" rx="14" fill="#ECF1FA" stroke="none" stroke-width="2"/>
+<text x="838" y="838" font-size="27" fill="#285EAB">节目 RSS URL</text>
+<text x="838" y="880" font-size="21" fill="#526970">发现每一集节目</text>
+<text x="838" y="922" font-size="20" fill="#285EAB">＋ YouTube 频道 /</text>
+<text x="859" y="953" font-size="20" fill="#285EAB">播放列表 URL</text>
+<path d="M775,887 H803 M793,881 L803,887 L793,893" fill="none" stroke="#285EAB" stroke-width="3"/>
+<path d="M1080,887 H1117 M1107,881 L1117,887 L1107,893" fill="none" stroke="#285EAB" stroke-width="3"/>
+<text x="1132" y="816" font-size="23" fill="#285EAB">RSS → 标题、日期、GUID</text>
+<text x="1132" y="862" font-size="23" fill="#193039">pod2txt → 节目转录文本</text>
+<text x="1132" y="907" font-size="22" fill="#526970">YouTube → 匹配观看链接</text>
+<text x="1132" y="978" font-size="22" fill="#285EAB">输出：feed-podcasts.json</text>
+<text x="76" y="1018" font-size="18" fill="#285EAB">文字内容来自节目转录；YouTube 主要提供对应的观看入口。</text>
+<rect x="50" y="1055" width="1500" height="224" rx="18" fill="#FFFFFF" stroke="#E8DECE" stroke-width="2"/>
+<text x="72" y="1102" font-size="29" fill="#A66517">03  博客网站 · 2 个栏目</text>
+<a href="https://www.anthropic.com/engineering" target="_blank"><text x="76" y="1161" font-size="26" fill="#193039">Anthropic Engineering</text></a>
+<a href="https://claude.com/blog" target="_blank"><text x="76" y="1210" font-size="26" fill="#193039">Claude Blog</text></a>
+<text x="431" y="1161" font-size="20" fill="#526970">anthropic.com/engineering</text>
+<text x="431" y="1210" font-size="20" fill="#526970">claude.com/blog</text>
+<rect x="816" y="1103" width="252" height="132" rx="14" fill="#F7F0E5" stroke="none" stroke-width="2"/>
+<text x="838" y="1149" font-size="27" fill="#A66517">博客栏目 URL</text>
+<text x="838" y="1193" font-size="20" fill="#526970">定位栏目和文章页面</text>
+<path d="M775,1168 H803 M793,1162 L803,1168 L793,1174" fill="none" stroke="#A66517" stroke-width="3"/>
+<path d="M1080,1168 H1117 M1107,1162 L1117,1168 L1107,1174" fill="none" stroke="#A66517" stroke-width="3"/>
+<text x="1132" y="1118" font-size="23" fill="#A66517">栏目页 → 文章链接</text>
+<text x="1132" y="1160" font-size="21" fill="#193039">正文页 → 结构化数据 / HTML</text>
+<text x="1132" y="1201" font-size="21" fill="#526970">提取标题、正文、日期与链接</text>
+<text x="1132" y="1252" font-size="21" fill="#A66517">输出：feed-blogs.json</text>
+<text x="52" y="1334" font-size="24" fill="#193039">三路采集之后，共用后续流程</text>
+<rect x="50" y="1357" width="450" height="108" rx="18" fill="#1B3F45" stroke="none" stroke-width="2"/>
+<text x="74" y="1400" font-size="29" fill="#FFFFFF">三个公开 JSON feed</text>
+<text x="74" y="1440" font-size="20" fill="#CDE2DD">中心采集结果，供客户端读取</text>
+<rect x="575" y="1357" width="450" height="108" rx="18" fill="#1B3F45" stroke="none" stroke-width="2"/>
+<text x="599" y="1400" font-size="29" fill="#FFFFFF">宿主 AI 整理</text>
+<text x="599" y="1440" font-size="20" fill="#CDE2DD">按用户偏好筛选、摘要与翻译</text>
+<rect x="1100" y="1357" width="450" height="108" rx="18" fill="#1B3F45" stroke="none" stroke-width="2"/>
+<text x="1124" y="1400" font-size="29" fill="#FFFFFF">阅读与推送</text>
+<text x="1124" y="1440" font-size="20" fill="#CDE2DD">聊天 / Telegram / 邮件</text>
+<path d="M512,1410 H562 M552,1404 L562,1410 L552,1416" fill="none" stroke="#087B6A" stroke-width="3"/>
+<path d="M1037,1410 H1087 M1077,1404 L1087,1410 L1077,1416" fill="none" stroke="#087B6A" stroke-width="3"/>
+<text x="52" y="1518" font-size="18" fill="#526970">依据：zarazhangrui/follow-builders · c8da0e7 · 2026-09-11 研究。原创源码示意，非实测采集界面。</text>
+</svg>

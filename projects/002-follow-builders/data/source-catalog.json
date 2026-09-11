@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-11",
+  "upstream": "https://github.com/zarazhangrui/follow-builders",
+  "commit": "c8da0e7ece27d6a0007b53f54f546bf0ff1086d4",
+  "sourceFile": "https://github.com/zarazhangrui/follow-builders/blob/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/config/default-sources.json",
+  "description": "根据上游配置重整的来源元数据；不是上游可直接加载的配置。仅验证配置存在，未逐一验证来源可访问性或转录服务可用性。",
+  "sources": [
+    {
+      "id": "x:karpathy",
+      "type": "x",
+      "name": "Andrej Karpathy",
+      "handle": "karpathy",
+      "url": "https://x.com/karpathy",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:swyx",
+      "type": "x",
+      "name": "Swyx",
+      "handle": "swyx",
+      "url": "https://x.com/swyx",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:joshwoodward",
+      "type": "x",
+      "name": "Josh Woodward",
+      "handle": "joshwoodward",
+      "url": "https://x.com/joshwoodward",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:bcherny",
+      "type": "x",
+      "name": "Boris Cherny",
+      "handle": "bcherny",
+      "url": "https://x.com/bcherny",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:thsottiaux",
+      "type": "x",
+      "name": "Thibault Sottiaux",
+      "handle": "thsottiaux",
+      "url": "https://x.com/thsottiaux",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:petergyang",
+      "type": "x",
+      "name": "Peter Yang",
+      "handle": "petergyang",
+      "url": "https://x.com/petergyang",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:thenanyu",
+      "type": "x",
+      "name": "Nan Yu",
+      "handle": "thenanyu",
+      "url": "https://x.com/thenanyu",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:realmadhuguru",
+      "type": "x",
+      "name": "Madhu Guru",
+      "handle": "realmadhuguru",
+      "url": "https://x.com/realmadhuguru",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:amandaaskell",
+      "type": "x",
+      "name": "Amanda Askell",
+      "handle": "AmandaAskell",
+      "url": "https://x.com/AmandaAskell",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:_catwu",
+      "type": "x",
+      "name": "Cat Wu",
+      "handle": "_catwu",
+      "url": "https://x.com/_catwu",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:trq212",
+      "type": "x",
+      "name": "Thariq",
+      "handle": "trq212",
+      "url": "https://x.com/trq212",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:googlelabs",
+      "type": "x",
+      "name": "Google Labs",
+      "handle": "GoogleLabs",
+      "url": "https://x.com/GoogleLabs",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:amasad",
+      "type": "x",
+      "name": "Amjad Masad",
+      "handle": "amasad",
+      "url": "https://x.com/amasad",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:rauchg",
+      "type": "x",
+      "name": "Guillermo Rauch",
+      "handle": "rauchg",
+      "url": "https://x.com/rauchg",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:alexalbert__",
+      "type": "x",
+      "name": "Alex Albert",
+      "handle": "alexalbert__",
+      "url": "https://x.com/alexalbert__",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:levie",
+      "type": "x",
+      "name": "Aaron Levie",
+      "handle": "levie",
+      "url": "https://x.com/levie",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:ryolu_",
+      "type": "x",
+      "name": "Ryo Lu",
+      "handle": "ryolu_",
+      "url": "https://x.com/ryolu_",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:garrytan",
+      "type": "x",
+      "name": "Garry Tan",
+      "handle": "garrytan",
+      "url": "https://x.com/garrytan",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:mattturck",
+      "type": "x",
+      "name": "Matt Turck",
+      "handle": "mattturck",
+      "url": "https://x.com/mattturck",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:zarazhangrui",
+      "type": "x",
+      "name": "Zara Zhang",
+      "handle": "zarazhangrui",
+      "url": "https://x.com/zarazhangrui",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:nikunj",
+      "type": "x",
+      "name": "Nikunj Kothari",
+      "handle": "nikunj",
+      "url": "https://x.com/nikunj",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:steipete",
+      "type": "x",
+      "name": "Peter Steinberger",
+      "handle": "steipete",
+      "url": "https://x.com/steipete",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:danshipper",
+      "type": "x",
+      "name": "Dan Shipper",
+      "handle": "danshipper",
+      "url": "https://x.com/danshipper",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:adityaag",
+      "type": "x",
+      "name": "Aditya Agarwal",
+      "handle": "adityaag",
+      "url": "https://x.com/adityaag",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:sama",
+      "type": "x",
+      "name": "Sam Altman",
+      "handle": "sama",
+      "url": "https://x.com/sama",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "x:claudeai",
+      "type": "x",
+      "name": "Claude",
+      "handle": "claudeai",
+      "url": "https://x.com/claudeai",
+      "acquisition": "X API v2 users/by + users/:id/tweets",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:Latent Space",
+      "type": "podcast",
+      "name": "Latent Space",
+      "url": "https://www.youtube.com/@LatentSpacePod",
+      "rssUrl": "https://pod2txt.vercel.app/api/feed?url=https://api.substack.com/feed/podcast/1084089.rss",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:Training Data",
+      "type": "podcast",
+      "name": "Training Data",
+      "url": "https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8",
+      "rssUrl": "https://feeds.megaphone.fm/trainingdata",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:No Priors",
+      "type": "podcast",
+      "name": "No Priors",
+      "url": "https://www.youtube.com/@NoPriorsPodcast",
+      "rssUrl": "https://feeds.megaphone.fm/nopriors",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:Unsupervised Learning",
+      "type": "podcast",
+      "name": "Unsupervised Learning",
+      "url": "https://www.youtube.com/@RedpointAI",
+      "rssUrl": "https://feeds.simplecast.com/dOSE_bdP",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:The MAD Podcast with Matt Turck",
+      "type": "podcast",
+      "name": "The MAD Podcast with Matt Turck",
+      "url": "https://www.youtube.com/@DataDrivenNYC/videos",
+      "rssUrl": "https://anchor.fm/s/f2ee4948/podcast/rss",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "podcast:AI & I by Every",
+      "type": "podcast",
+      "name": "AI & I by Every",
+      "url": "https://www.youtube.com/playlist?list=PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL",
+      "rssUrl": "https://anchor.fm/s/ed1f5584/podcast/rss",
+      "acquisition": "RSS + pod2txt transcript; YouTube URL title matching",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "blog:Anthropic Engineering",
+      "type": "blog",
+      "name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "acquisition": "site-specific HTML extraction",
+      "verification": "upstream-config-only"
+    },
+    {
+      "id": "blog:Claude Blog",
+      "type": "blog",
+      "name": "Claude Blog",
+      "url": "https://claude.com/blog",
+      "acquisition": "site-specific HTML extraction",
+      "verification": "upstream-config-only"
+    }
+  ]
+}

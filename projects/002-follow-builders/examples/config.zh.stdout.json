@@ -1,0 +1,9 @@
+{
+  "platform": "other",
+  "language": "zh",
+  "timezone": "Asia/Shanghai",
+  "frequency": "daily",
+  "deliveryTime": "16:00",
+  "delivery": { "method": "stdout" },
+  "onboardingComplete": true
+}

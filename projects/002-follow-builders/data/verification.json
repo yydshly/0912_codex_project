@@ -1,0 +1,141 @@
+{
+  "upstream": "https://github.com/zarazhangrui/follow-builders",
+  "commit": "c8da0e7ece27d6a0007b53f54f546bf0ff1086d4",
+  "verifiedAt": "2026-09-11T02:48:58.243Z",
+  "runtime": "v22.15.0",
+  "method": "固定提交公开材料 + 上游准备脚本在虚拟 POSIX 文件系统中隔离执行；采集、模型生成和外部发送未运行。",
+  "sourceCounts": {
+    "x": 26,
+    "podcasts": 6,
+    "blogs": 2
+  },
+  "feeds": [
+    {
+      "type": "x",
+      "generatedAt": "2026-09-10T06:40:40.193Z",
+      "lookbackHours": 24,
+      "stats": {
+        "xBuilders": 14,
+        "totalTweets": 28
+      },
+      "errors": []
+    },
+    {
+      "type": "podcasts",
+      "generatedAt": "2026-09-10T06:40:42.046Z",
+      "lookbackHours": 336,
+      "stats": {
+        "podcastEpisodes": 0
+      },
+      "errors": []
+    },
+    {
+      "type": "blogs",
+      "generatedAt": "2026-09-10T06:40:42.278Z",
+      "lookbackHours": 72,
+      "stats": {
+        "blogPosts": 0
+      },
+      "errors": []
+    }
+  ],
+  "cases": [
+    {
+      "name": "读取固定快照与五份提示词",
+      "passed": true,
+      "observation": "14 位作者、28 条动态；3 个 feed 加 5 份 prompt，共 8 次请求。"
+    },
+    {
+      "name": "用户提示词优先",
+      "passed": true,
+      "observation": "用户规则覆盖远程规则，少一次远程请求。"
+    },
+    {
+      "name": "远程提示词 HTTP 503",
+      "passed": true,
+      "observation": "虚拟 POSIX 环境中成功回退本地提示词。"
+    },
+    {
+      "name": "远程提示词网络异常",
+      "passed": true,
+      "observation": "复现缺陷：fetch 抛异常时整个准备过程失败，没有进入本地回退。"
+    },
+    {
+      "name": "三个 feed 都返回 HTTP 503",
+      "passed": true,
+      "observation": "复现状态歧义：status 仍为 ok，内容为空，errors 记录三个失败。"
+    },
+    {
+      "name": "周报设置的数据覆盖范围",
+      "passed": true,
+      "observation": "daily 与 weekly 读取同一批内容，没有历史聚合。"
+    },
+    {
+      "name": "重复读取",
+      "passed": true,
+      "observation": "相同快照再次读取，内容相同；准备脚本没有用户级已读去重。"
+    },
+    {
+      "name": "只有博客的输入",
+      "passed": true,
+      "observation": "准备脚本保留博客；静态检查发现 Skill 的无内容条件只检查 X 和播客，存在提前停止风险。测试博客为合成数据。"
+    }
+  ],
+  "materials": [
+    {
+      "path": "scripts/prepare-digest.js",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/scripts/prepare-digest.js",
+      "sha256": "bdc10f3be67e235c4a86aed6132bbb1f12a8d580f4715d2db5f4a7f78b5bf81f"
+    },
+    {
+      "path": "SKILL.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/SKILL.md",
+      "sha256": "c0e801510917befd8efe89b190993472673bad1b79c5c81b95203f0a58c185fa"
+    },
+    {
+      "path": "config/default-sources.json",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/config/default-sources.json",
+      "sha256": "a46400000a70721499e7d36f8ce97bea8f87416e912c14226b78a38999ff4c49"
+    },
+    {
+      "path": "feed-x.json",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/feed-x.json",
+      "sha256": "2106f25399cb6810dbc6706233fa51e30348d347250fef6a195dd0f729dc6869"
+    },
+    {
+      "path": "feed-podcasts.json",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/feed-podcasts.json",
+      "sha256": "2ca2750033f40b5f9441cb347d8ad5d81c86f4c5f67e9a52a2954fd3c44c9a69"
+    },
+    {
+      "path": "feed-blogs.json",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/feed-blogs.json",
+      "sha256": "5cb8e6fec6b7b9f9e801927f0778c92909eb5c62ccd9166b2f58e8bda1021e68"
+    },
+    {
+      "path": "prompts/summarize-podcast.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/prompts/summarize-podcast.md",
+      "sha256": "e9d6267b4b6b92b55aa813d22a91ecfe9e09bcb44586f030ce6f64477e11180a"
+    },
+    {
+      "path": "prompts/summarize-tweets.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/prompts/summarize-tweets.md",
+      "sha256": "e30e9f172a5673ccb9a6220d5379cdb69b42e1eb67194f9ebc493c88a5b18578"
+    },
+    {
+      "path": "prompts/summarize-blogs.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/prompts/summarize-blogs.md",
+      "sha256": "58bfb1da427305b118ffcceabe8830f54566a142896e3c8605e556b98a5d2424"
+    },
+    {
+      "path": "prompts/digest-intro.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/prompts/digest-intro.md",
+      "sha256": "5d25f2184b8bbacd910fcbe4547f02b83af76eb03f57f3b0bef02c8d2e1b91c5"
+    },
+    {
+      "path": "prompts/translate.md",
+      "url": "https://raw.githubusercontent.com/zarazhangrui/follow-builders/c8da0e7ece27d6a0007b53f54f546bf0ff1086d4/prompts/translate.md",
+      "sha256": "96bd5896fa1792d95c0df189fbe92433f1bc50e5d7d49b71323a3afccf5f72ed"
+    }
+  ]
+}

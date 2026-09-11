@@ -11,6 +11,7 @@
 | 编号 | 研究项目 | 摘要 | 原始仓库 | 研究状态 | Web 演示 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 001 | [Jan](projects/001-jan/README.md) | 类 ChatGPT 的开源桌面 App：组织上下文、接入本地或云端模型并执行工具；附架构研究与 Web 页面 | [janhq/jan](https://github.com/janhq/jan) | 研究中 | — |
+| 002 | [Follow Builders](projects/002-follow-builders/README.md) | 预设平台上的账号、节目、网站及对应抓取方式，采集解析后由 AI 整理为可阅读、可推送的简报 | [zarazhangrui/follow-builders](https://github.com/zarazhangrui/follow-builders) | 已总结 | — |
 | 004 | [小智 ESP32](projects/004-xiaozhi-esp32/README.md) | 适配硬件的固件库：AI 产品硬件组成、固件能力、DIY 接线与自制产品全流程 | [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) | 已总结 | [在线阅读](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 
 ## 项目图览
@@ -22,6 +23,14 @@
 **Jan 是一个类 ChatGPT 的开源桌面 App。** 以“输入 → 上下文 → 模型 → 反馈”为核心，关联记忆检索、工具与子 Agent、下载升级和文件管理。另附六大能力域与十八个源码研究入口。原创概念架构图；已做源码静态梳理，尚未运行验证。
 
 ![Jan：基础链路与记忆、工具执行、模型资源及共同支撑模块的关系](projects/001-jan/assets/core-flow-architecture.png)
+
+### 002 · [Follow Builders](projects/002-follow-builders/README.md)
+
+**预设来源驱动的 AI 简报工具。** 提前设置平台上的具体账号、节目或网站栏目及对应抓取方式，经采集、解析、过滤去重后，交给宿主 AI 摘要和翻译，再展示或推送。[理解汇总](projects/002-follow-builders/notes/08-understanding.md) · [完整研究](projects/002-follow-builders/README.md)
+
+下图列出 26 个 X 账号、6 个播客节目和 2 个博客栏目。播客经 RSS 与转录服务取文本，YouTube 用于匹配观看链接。原创源码示意，真实采集与推送尚未端到端验证。
+
+![Follow Builders：全部 34 个关注对象、定位方式及获取解析路径](projects/002-follow-builders/assets/source-map.png)
 
 ### 004 · [小智 ESP32](projects/004-xiaozhi-esp32/README.md)
 
