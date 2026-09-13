@@ -17,7 +17,7 @@
 | 005 | [OpenMAIC](projects/005-openmaic/README.md) | 资料转可执行课堂：课件、白板、实验、对话、测验与项目任务；拆解生成和调度原理，比较五产品的适用场景 | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 已总结 | [在线研究与案例](https://yydshly.github.io/0912_codex_project/005-openmaic/) |
 | 006 | [Pixelle-Video](projects/006-pixelle-video/README.md) | 真实源码实测：Codex 图片与文案，经原生配音、字幕模板和合成得到 14.7 秒短片 | [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 研究中 | [本地运行与成片](projects/006-pixelle-video/web/README.md) |
 | 007 | [waoowaoo](projects/007-waoowaoo/README.md) | v0.5 创作工作区：已实测素材导入、原版画布、图片预览和助手素材引用；附四项目理解汇总 | [waooAI/waoowaoo](https://github.com/waooAI/waoowaoo) | 研究中 | [四项目在线汇总](https://yydshly.github.io/0912_codex_project/007-waoowaoo/) · [原版运行](projects/007-waoowaoo/web/README.md) |
-| 008 | [RuView](projects/008-ruview/README.md) | 分析多径叠加后的 CSI 变化推断活动；真实人体演示依赖 CSI 硬件、匹配算法与现场验证；借鉴信号→事件→联动，扩展日常蓝牙和手机感知 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 理解已总结；人体效果未验证 | [理解汇总](projects/008-ruview/notes/understanding.md) · [本地测试](projects/008-ruview/web/README.md) |
+| 008 | [RuView](projects/008-ruview/README.md) | 分析多径叠加后的 CSI 变化推断活动；真实人体演示依赖 CSI 硬件、匹配算法与现场验证；借鉴信号→事件→联动，扩展日常蓝牙和手机感知 | [ruvnet/RuView](https://github.com/ruvnet/RuView) | 理解已总结；人体效果未验证 | [网页汇总与访问](projects/008-ruview/web/README.md#研究汇总网页) · [本地测试](projects/008-ruview/real-wifi/README.md) |
 
 ## 项目图览
 
@@ -86,6 +86,8 @@
 **真实演示依赖：支持 CSI 输出的设备与固件、无线链路、接收服务、匹配算法，以及现场布置和动作对照。** 本机只验证了 AX211 的 RSSI 采集与原版分类响应；用户走动无响应的情况仍保留，人体检测、定位和体征效果未验证。
 
 **对我们的意义：学习“可观测信号 → 状态判断 → 事件联动”，先验证输入和效果，再设计产品。** 日常设备可从蓝牙随身设备感知、连接状态联动和手机动作遥控切入；这些是待开发方向，需要各自适配，不能直接继承 RuView 的人体感知能力。[理解、价值与扩展汇总](projects/008-ruview/notes/understanding.md) · [真实测试依赖](projects/008-ruview/real-wifi/README.md) · [实测记录](projects/008-ruview/notes/live-wifi-test-20260913.md) · [无响应排查](projects/008-ruview/notes/live-input-diagnosis.md)。下图为原创原理概念图，非检测结果。
+
+另有[研究汇总网页](projects/008-ruview/web/README.md#研究汇总网页)，关联原理、依赖、价值与本地实验；已接入 Pages 构建，本次公开发布待核验。
 
 ![RuView 原理、真实演示依赖与研究价值：多径叠加后采集 CSI，再经算法推断状态；本机人体效果未验证](projects/008-ruview/assets/principle-and-value.svg)
 

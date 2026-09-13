@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RuView 研究汇总：多径叠加与 CSI 原理、真实演示依赖、本机 RSSI 实测边界，以及蓝牙和手机等日常设备的扩展价值。">
+  <title>RuView · 原理、实测与日常设备扩展</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="#main"><span class="brand-number">008</span> RuView <span>研究汇总</span></a>
+    <nav aria-label="研究导航"><a href="#principle">原理</a><a href="#requirements">真实演示依赖</a><a href="#evidence">实测边界</a><a href="#value">价值与扩展</a><a href="#entry">体验入口</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="heading">
+      <div class="eyebrow">WIFI SENSING / 从讨论到研究结论</div>
+      <h1 id="heading">先读懂信号，<br><span>再谈人体感知。</span></h1>
+      <p class="lead">人体改变无线传播路径。RuView 分析接收信号中的细节，尝试推断活动、位置与姿态。真实效果取决于设备、算法和现场验证。</p>
+      <div class="hero-actions"><a class="button primary" href="#principle">从原理开始 ↓</a><a class="button" href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/notes/understanding.md">完整研究笔记 ↗</a></div>
+      <div class="research-status"><span>整理于 2026-09-13</span><span>上游版本 <a href="https://github.com/ruvnet/RuView/tree/33a9e90896a691a3f98de042b463e5945178b87c">33a9e908</a></span><strong>人体感知效果尚未验证</strong></div>
+    </section>
+
+    <div class="abstract" aria-label="三点研究摘要">
+      <article><span class="section-no">原理</span><h2>先叠加，再分析</h2><p>多条传播路径在接收端叠加，CSI 记录幅度与相位，算法再分析时间变化。</p></article>
+      <article><span class="section-no">依赖</span><h2>数据入口决定边界</h2><p>真实 CSI 演示需要支持的硬件与固件、匹配软件，以及现场布置和动作对照。</p></article>
+      <article><span class="section-no">意义</span><h2>把信号变成可用事件</h2><p>复用采集、判断和联动的方法，从手边蓝牙设备与手机传感器的小目标开始。</p></article>
+    </div>
+
+    <section id="principle" class="chapter">
+      <div class="section-head"><div class="eyebrow">01 / PRINCIPLE</div><h2>“回声”是类比，核心是传播变化。</h2><p>设备通常先收到混合信号，没有天然附带“这条来自人体，那条来自墙壁”的标签。</p></div>
+      <ol class="signal-flow">
+        <li><span>01</span><h3>路由器发射</h3><p>信号沿直达、人体或墙壁反射等多条路径传播。</p></li>
+        <li><span>02</span><h3>接收端叠加</h3><p>人移动，反射路线改变；波峰错开，叠加结果时而加强、时而抵消。</p></li>
+        <li><span>03</span><h3>芯片导出 CSI</h3><p>利用数据包中已知的训练信号，估计各频点的幅度和相位。</p></li>
+        <li><span>04</span><h3>算法推断状态</h3><p>综合频点、天线与时刻的信息；复杂姿态还需要匹配的训练模型。</p></li>
+      </ol>
+      <div class="comparison">
+        <article><span class="tag">RSSI</span><h3>整体信号有多强</h3><p>信息较粗，受量化、平滑、更新机制和环境影响。本机现有 Windows 网卡入口只能读到这一层。</p></article>
+        <article><span class="tag">CSI</span><h3>各频点怎样改变信号</h3><p>幅度描述强弱，相位描述波峰错开程度。提供更细的传播线索，但本身不等于人体坐标。</p></article>
+      </div>
+      <p class="note">活动检测不必先算位置；某些姿态模型直接从一段 CSI 预测人体关键点，也不是逐条回波定位后拼出人体。<a href="https://docs.espressif.com/projects/esp-idf/en/v5.0/esp32s3/api-guides/wifi.html#wi-fi-channel-state-information">芯片原理资料 ↗</a> · <a href="https://github.com/ruvnet/RuView/blob/33a9e90896a691a3f98de042b463e5945178b87c/docs/benchmarks/mmfi-wifi-sensing-study.md">上游姿态研究 ↗</a></p>
+    </section>
+
+    <section id="requirements" class="chapter">
+      <div class="section-head"><div class="eyebrow">02 / REAL-WORLD REQUIREMENTS</div><h2>怎样才算真实演示？</h2><p>让页面有数据只是起点。要判断能否识别人，需要完成下面这些环节。</p></div>
+      <ol class="requirements">
+        <li><span>1</span><div><h3>能拿到目标所需的数据</h3><p>CSI 起步可用受固件支持的 ESP32-S3 开发板、USB 数据线、2.4 GHz 路由器与电脑。板型、固件和导出能力需匹配。单节点采集成功不保证人体识别成功。</p></div></li>
+        <li><span>2</span><div><h3>采集与软件正确连接</h3><p>核对来源、节点包数、采样时间和信号质量。接收程序与协议匹配，选择真实设备来源；失去输入时显示未知或停止。</p></div></li>
+        <li><span>3</span><div><h3>算法适合这个任务和环境</h3><p>活动、位置、人数、姿态与呼吸有不同的信息要求。需要合适的布置、环境参数，以及任务对应的模型或标定。</p></div></li>
+        <li><span>4</span><div><h3>结果与现实同步对照</h3><p>重复记录静止、走动和空房；位置、姿态或周期测量使用对应的真值，报告误报、漏报、延迟和无效时段。</p></div></li>
+      </ol>
+      <div class="boundary"><strong>本机目前完成到哪里？</strong><p>AX211 网卡的真实 RSSI 采集与原版 v1 分类已运行。CSI 设备尚未连接，人体检测、人数、定位、骨架和体征效果均未验证。</p><a href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/real-wifi/README.md">设备条件与真实测试步骤 ↗</a></div>
+    </section>
+
+    <section id="evidence" class="chapter">
+      <div class="section-head"><div class="eyebrow">03 / OBSERVATIONS & LIMITS</div><h2>已经看到的结果，也包括失败。</h2><p>以下是 2026-09-13 的历史实验结论，不是当前房间的实时监测。</p></div>
+      <div class="evidence-grid">
+        <article><span class="tag">合成输入 · 原版计算</span><h3>算法确实执行了</h3><p>理想周期输入可提取节律；加入运动干扰后，心率结果锁定错误周期，内部状态仍可能为 Valid。</p><p class="limit">说明模块怎样响应输入，不代表人体呼吸或心率准确率。</p><a href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/notes/README.md">算法实验记录 ↗</a></article>
+        <article><span class="tag">真实网卡 · 无动作真值</span><h3>356 个样本，一次突变</h3><p>3 分钟内 RSSI 从 −56 变为 −62 dBm，4 个重叠分类窗口输出活动候选。</p><p class="limit">当时没有受控动作，不能把信号变化归因于人体，也不是 4 次独立人体事件。</p><a href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/notes/live-wifi-test-20260913.md">真实观察记录 ↗</a></article>
+        <article><span class="tag warning">走动无响应 · 未解决的效果问题</span><h3>画面刷新，不等于感知有效</h3><p>页面曾处于历史回放；同时一轮实时记录的 355 个样本均为 −57 dBm，Windows 原生查询也固定。</p><p class="limit">已修正模式提示。未区分驱动更新、量化与环境布置等因素，不能声称人体检测问题已解决。</p><a href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/notes/live-input-diagnosis.md">无响应排查 ↗</a></article>
+      </div>
+      <details><summary>怎样区分原理图、动画、合成实验和真实监测？</summary><div class="detail-body"><p><strong>原理图／两路波模型：</strong>解释传播与叠加，不能代表完整房间。</p><p><strong>虚拟房间：</strong>人物、骨架、人数与事件来自脚本，未经过识别模型。</p><p><strong>算法实验：</strong>输入为合成信号，输出由固定版本原版模块真实计算。</p><p><strong>真实 RSSI：</strong>网卡原始读数经过归档 v1 分类器，人体结论仍需验证。</p><p><strong>真实 CSI 人体演示：</strong>本项目尚未开展。</p></div></details>
+    </section>
+
+    <section id="value" class="chapter">
+      <div class="section-head"><div class="eyebrow">04 / VALUE & EVERYDAY DEVICES</div><h2>对我们有用的是一条开发方法。</h2><p>先确认信号能说明什么，再把可靠的状态变成事件和联动。输入不足和验证失败，也是决定下一步的重要结果。</p></div>
+      <div class="event-flow" aria-label="可复用的产品开发链路"><span>原始信号</span><b>→</b><span>质量与未知状态</span><b>→</b><span>特征与判断</span><b>→</b><span>事件</span><b>→</b><span>提醒与联动</span></div>
+      <p class="note">可复用来源记录、异常处理、实时／历史区分和验收方法。换成蓝牙或手机传感器后，采集协议、特征和算法需要各自适配。</p>
+      <h3 class="subheading">不增加专用设备，可以从这些方向开始。</h3>
+      <p class="note">以下均为待开发方向；本项目尚未实现蓝牙采集、手机应用或家居控制。</p>
+      <div class="everyday-grid">
+        <article><span>电脑 ＋ 随身手机</span><h3>蓝牙设备感知</h3><p>记录设备出现、持续较近、持续较远或暂时失联，扩展离席提示与锁屏。</p><small>手机须可被稳定识别；RSSI 仅作粗略趋势。手机留桌、人离开时可能误判。</small><a href="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-feature-dynamic-lock">现成例子：Windows 动态锁 ↗</a></article>
+        <article><span>电脑／手机 ＋ 耳机</span><h3>连接状态联动</h3><p>连接后打开会议工具或切换音频，断开后暂停播放或提醒可能遗落。</p><small>连接不等于已经佩戴；断连也可能是关机或没电。需确认系统可提供的状态。</small></article>
+        <article><span>手机传感器 ＋ 电脑</span><h3>动作遥控与同步反馈</h3><p>手机倾斜、旋转或摇动时，电脑画面同步变化，便于核对输入与输出。</p><small>动作由手机传感器测量，蓝牙／Wi-Fi 负责传输；需适配应用。</small><a href="https://developer.android.com/develop/sensors-and-location/sensors/sensors_motion">手机运动传感器 ↗</a></article>
+      </div>
+      <details><summary>蓝牙能替代 CSI 做人体雷达吗？</summary><div class="detail-body"><p>普通蓝牙更适合感知自己设备的出现、连接状态和粗略远近。把固定 Wi-Fi 链路换成蓝牙 RSSI，不会自动获得人体骨架或呼吸数据。</p><p>更精细的 Bluetooth Channel Sounding 需要通信双方支持对应功能，不能默认旧设备升级软件即可使用。</p><a href="https://www.bluetooth.com/learn-about-bluetooth/feature-enhancements/channel-sounding/">蓝牙官方测距说明 ↗</a></div></details>
+      <div class="next-step"><span class="section-no">建议的下一步</span><h3>选一个可重复验证的小目标。</h3><p>先确认现有设备能提供真实输入，做出信号或动作的直接反馈；记录近／远、静止／移动、断连／关机等对照，再接一个页面提示或本地提醒。继续研究 CSI 时，另行补齐硬件与人体实验条件。</p></div>
+    </section>
+
+    <section id="entry" class="chapter">
+      <div class="section-head"><div class="eyebrow">05 / READ & TRY</div><h2>研究、实验和现场，各有入口。</h2><p id="entry-context">本页可在线阅读。下面的实验页面需要在自己的电脑启动对应服务；在线页面不会连接或采集你的网卡。</p></div>
+      <div class="entry-grid">
+        <article><span class="tag">真实 RSSI · 需本地服务</span><h3>本机 Wi-Fi 监测</h3><p>读取真实网卡信号、运行原版分类。失去数据即停止；历史记录需要本机原始文件。</p><a class="button" data-local="live.html" data-local-label="打开本机监测 ↗" href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/web/README.md#真实-wifi-可视化入口">查看监测启动步骤 ↗</a></article>
+        <article><span class="tag">合成输入 · 原版模块</span><h3>算法对照实验</h3><p>五组输入与输出、失败对照、参数重算和回放。原版算法运行不等于人体效果验证。</p><a class="button" data-local="http://127.0.0.1:8768/" data-local-label="打开本机算法实验 ↗" href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/web/README.md#合成信号实验入口">查看算法实验步骤 ↗</a></article>
+        <article><span class="tag">脚本动画 · 非真实识别</span><h3>虚拟房间体验</h3><p>观察产品可以怎样呈现人物、轨迹和事件；所有动作与监测状态来自脚本。</p><a class="button" data-local="http://127.0.0.1:8768/scene.html" data-local-label="打开本机虚拟房间 ↗" href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/web/README.md#虚拟房间动态演示">查看虚拟房间说明 ↗</a></article>
+      </div>
+      <div class="source-links"><a href="https://github.com/yydshly/0912_codex_project/blob/main/projects/008-ruview/notes/understanding.md">完整理解与来源</a><a href="https://github.com/yydshly/0912_codex_project/tree/main/projects/008-ruview">本项目文档与源码</a><a href="https://github.com/ruvnet/RuView/tree/33a9e90896a691a3f98de042b463e5945178b87c">固定版本上游仓库</a><a href="https://yydshly.github.io/0912_codex_project/">全部研究网页</a></div>
+    </section>
+    <footer><span>008 / RuView · 独立研究整理</span><span>真实数据 ≠ 已验证的人体结论</span></footer>
+  </main>
+  <script src="summary.js" defer></script>
+</body>
+</html>

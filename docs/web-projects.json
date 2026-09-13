@@ -19,5 +19,12 @@
     "upstream": "https://github.com/waooAI/waoowaoo",
     "description": "对照 Pixelle-Video、waoowaoo、火宝短剧与 Toonflow 的能力、原理、交互和适用场景，附真实成片与操作截图。",
     "output": "projects/007-waoowaoo/web/summary/dist"
+  },
+  {
+    "slug": "008-ruview",
+    "title": "008 · RuView",
+    "upstream": "https://github.com/ruvnet/RuView",
+    "description": "多径叠加与 CSI 原理；真实演示的硬件、算法和现场验证条件；本机 RSSI 实测边界及日常蓝牙、手机感知的扩展价值。",
+    "output": "projects/008-ruview/web/dist"
   }
 ]

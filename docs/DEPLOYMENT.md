@@ -44,6 +44,8 @@ GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`�
 
 ## 后续接入新项目
 
+008 RuView 新增独立研究汇总，登记输出为 `projects/008-ruview/web/dist`，本次公开发布待核验。工作流执行 `build_summary.py` 与 `check_summary.py`，只发布说明页面、样式、脚本和图标四个文件；不发布本机 RSSI 服务、原始现场记录或算法运行时。资料、边界与本地入口见[008 Web 说明](../projects/008-ruview/web/README.md)。
+
 005 OpenMAIC 已加入站点清单与构建流程并发布，静态输出为 `projects/005-openmaic/web/dist`，包含能力示例、理解汇总、六模块原理、五产品场景选型，以及 `case.html` 欧姆定律互动课堂。该子项目须先安装自身 npm 依赖；Python 构建会同时调用课堂打包。运行与验证见 [005 Web 说明](../projects/005-openmaic/web/README.md)。基础路径为 `/0912_codex_project/005-openmaic/`。静态案例不调用模型，也不代替完整 OpenMAIC 服务端。
 
 在新子项目保存独立依赖与运行说明，在工作流中增加其构建和检查步骤，再按编号将其静态输出登记到站点清单。汇总脚本只复制构建结果，不统一各项目技术栈。资源使用相对路径，或配置 `/0912_codex_project/NNN-slug/` 基础路径；检查直接访问子页面和刷新行为。

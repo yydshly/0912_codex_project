@@ -53,6 +53,11 @@ jobs:
           python projects/007-waoowaoo/web/summary/build.py
           python projects/007-waoowaoo/web/summary/check.py
           node --check projects/007-waoowaoo/web/summary/public/app.js
+      - name: Build and check RuView research summary
+        run: |
+          python projects/008-ruview/web/build_summary.py
+          python projects/008-ruview/web/check_summary.py
+          node --check projects/008-ruview/web/public/summary.js
       - name: Assemble all registered sites
         run: python scripts/build_pages.py
       - uses: actions/configure-pages@v5

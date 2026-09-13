@@ -1,5 +1,22 @@
 # RuView 无线感知实验室
 
+## 研究汇总网页
+
+新增[本机研究汇总](http://127.0.0.1:8770/summary.html)，也可从 8768 服务访问同名页面。内容对应[理解笔记](../notes/understanding.md)，按原理、真实演示依赖、实测边界、价值与日常设备扩展、体验入口组织。真实监测、算法实验和虚拟房间页面均已提供“研究汇总”入口。
+
+公开版已接入[站点清单](../../../docs/web-projects.json)和[Pages 工作流](../../../.github/workflows/pages.yml)，本次发布状态待远端核验。只发布四个静态文件，不包含本机采集服务、现场原始记录、上游缓存、模型或依赖。公开页面的实验入口指向启动说明；只有在本机 8768 / 8770 研究服务中，入口才切换为对应的本地实验地址。
+
+源码：[summary.html](public/summary.html)、[summary.css](public/summary.css)、[summary.js](public/summary.js)。独立构建仅需 Python 3 标准库，无需 Rust、CSI 硬件或第三方 Python 依赖：
+
+```powershell
+python build_summary.py
+python check_summary.py
+node --check public/summary.js
+python -m http.server 8774 --bind 127.0.0.1 --directory dist
+```
+
+此时访问 <http://127.0.0.1:8774/>，预览与公开版一致的阅读入口。`dist/index.html` 来自 `public/summary.html`，不改变本机 8768 根地址的原版算法实验。校验包含发布文件白名单、资源与章节链接、三个本地页面的汇总入口；浏览器已验证本机监测与汇总往返、章节跳转、展开说明及手机布局。
+
 ## 真实 WiFi 可视化入口
 
 打开 [真实 WiFi 现场](http://127.0.0.1:8770/live.html)。这是本机网卡的实测曲线和原版 RSSI 活动分类，使用独立本地服务；下文 8768 端口仍为早期合成信号实验。
@@ -79,9 +96,9 @@ public/ 为完整静态页，无外部脚本与字体依赖：
 python -m http.server 8769 --bind 127.0.0.1 --directory public
 ```
 
-访问 http://127.0.0.1:8769/。无 API 时参数控件禁用，预设回放、说明和下载仍可用。尚未发布公网或加入站点清单；未来可采用基础路径 /0912_codex_project/008-ruview/。Pages 只执行静态回放，本机计算 API 不由 Pages 提供。
+访问 http://127.0.0.1:8769/。无 API 时参数控件禁用，预设回放、说明和下载仍可用。算法实验和实时监测未发布公网。站点清单仅登记上方独立构建的研究汇总，基础路径为 `/0912_codex_project/008-ruview/`；本机计算与采集 API 不由 Pages 提供。
 
-本次没有连接硬件或运行完整 sensing-server。研究时 PyPI 发布与 README 的 Python 2.x 宣称存在差异，因此使用固定源码构建。详见 [实测记录](../notes/README.md)。
+本次合成算法实验没有连接 CSI 硬件或运行完整 sensing-server。研究时 PyPI 发布与 README 的 Python 2.x 宣称存在差异，因此使用固定源码构建。详见 [实测记录](../notes/README.md)。
 
 [返回项目](../README.md)
 
