@@ -6,7 +6,7 @@
 
 **对我们的意义：掌握“信号采集 → 状态推断 → 事件 → 产品联动”的开发方法，并建立证据边界。** 无新增专用硬件的方向可从日常蓝牙设备的出现、远近趋势、连接状态，以及手机运动传感器切入；这些需要独立适配与验证，不是 RuView 已有的人体识别结果。
 
-[阅读理解、价值与扩展汇总](notes/understanding.md) · [研究汇总网页与运行说明](web/README.md#研究汇总网页) · [真实测试所需条件](real-wifi/README.md) · [实测失败线索](notes/live-input-diagnosis.md)
+[在线研究汇总](https://yydshly.github.io/0912_codex_project/008-ruview/) · [完整理解笔记](notes/understanding.md) · [网页运行说明](web/README.md#研究汇总网页) · [真实测试所需条件](real-wifi/README.md) · [实测失败线索](notes/live-input-diagnosis.md)
 
 ![RuView 的多径传播原理、CSI 实测依赖，以及信号到事件联动的研究价值；原创概念图](assets/principle-and-value.svg)
 
@@ -21,7 +21,7 @@
 | 实际执行模块 | 真实 RSSI：v1 RssiFeatureExtractor、PresenceClassifier；合成实验：wifi-densepose-vitals 0.3.2 的预处理、呼吸与心率提取 |
 | 技术栈 | 原版 Rust 模块 + Rust 适配器；RSSI 路径使用 Python / NumPy / SciPy；本地 HTTP 服务与 HTML / CSS / JavaScript |
 | 上游许可 | 仓库及所用模块 MIT；独立 MM-Fi 姿态权重 CC BY-NC 4.0，本演示未使用 |
-| 演示状态 | 本地实验已运行；研究汇总网页已接入 Pages 构建、待发布核验；AX211 网卡可读真实 RSSI，ESP32 CSI 硬件未连接 |
+| 演示状态 | 研究汇总网页已发布并核验；真实采集与算法实验在本机运行，AX211 可读 RSSI；ESP32 CSI 硬件未连接 |
 
 ## 演示证据分层
 
@@ -45,7 +45,7 @@
 
 ## 演示入口
 
-已增加[网页研究汇总](http://127.0.0.1:8770/summary.html)，关联原理、依赖、价值、实测记录与以下实验。公开版发布状态见[网页说明](web/README.md#研究汇总网页)。
+先看[在线研究汇总](https://yydshly.github.io/0912_codex_project/008-ruview/)，关联原理、依赖、价值、实测记录与实验启动说明。已于 2026-09-13 发布并实际核验；[本机汇总入口](http://127.0.0.1:8770/summary.html)可直接跳转到以下实验。发布与运行说明见[网页说明](web/README.md#研究汇总网页)。
 
 以下实验地址仅供启动服务后的本机使用，不是公开演示地址；历史原始记录不随仓库分发，其他电脑会显示该回放不可用。
 

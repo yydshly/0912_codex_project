@@ -1,6 +1,6 @@
 # 多项目 Web 演示部署约定
 
-本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32、005 OpenMAIC、007 AI 视频四项目汇总已发布，并在 2026-09-11 通过远端工作流与在线访问核验。
+本仓库采用 **GitHub Actions 构建 + GitHub Pages 托管**。004 小智 ESP32、005 OpenMAIC、007 AI 视频四项目汇总已发布，并在 2026-09-11 通过远端工作流与在线访问核验；008 RuView 研究汇总于 2026-09-13 发布并核验。
 
 Jan 项目已增加静态研究页面及独立构建说明，尚未发布站点。页面入口和运行方式见 [001 · Jan Web](../projects/001-jan/web/README.md)。本文件继续约定多项目目录和地址组织方式。
 
@@ -14,6 +14,7 @@ Jan 项目已增加静态研究页面及独立构建说明，尚未发布站点�
 | 004 小智 ESP32 | [小智在线研究页面](https://yydshly.github.io/0912_codex_project/004-xiaozhi-esp32/) |
 | 005 OpenMAIC | [能力与研究总览](https://yydshly.github.io/0912_codex_project/005-openmaic/) · [欧姆定律互动课堂](https://yydshly.github.io/0912_codex_project/005-openmaic/case.html) |
 | 007 AI 视频四项目汇总 | [能力、原理、交互及真实演示](https://yydshly.github.io/0912_codex_project/007-waoowaoo/) |
+| 008 RuView | [原理、真实演示依赖、实测边界与日常设备扩展](https://yydshly.github.io/0912_codex_project/008-ruview/) |
 
 004 的源码和运行步骤见 [小智 Web 说明](../projects/004-xiaozhi-esp32/web/README.md)。本地构建后可运行：
 
@@ -44,7 +45,7 @@ GitHub Pages 设置的构建来源应为 GitHub Actions（`build_type=workflow`�
 
 ## 后续接入新项目
 
-008 RuView 新增独立研究汇总，登记输出为 `projects/008-ruview/web/dist`，本次公开发布待核验。工作流执行 `build_summary.py` 与 `check_summary.py`，只发布说明页面、样式、脚本和图标四个文件；不发布本机 RSSI 服务、原始现场记录或算法运行时。资料、边界与本地入口见[008 Web 说明](../projects/008-ruview/web/README.md)。
+008 RuView 的独立研究汇总登记输出为 `projects/008-ruview/web/dist`，已于 2026-09-13 [首次发布成功](https://github.com/yydshly/0912_codex_project/actions/runs/34757308102)并实际打开。工作流执行 `build_summary.py` 与 `check_summary.py`，只发布说明页面、样式、脚本和图标四个文件；不发布本机 RSSI 服务、原始现场记录或算法运行时。已核验网页总入口与四个静态文件 HTTP 200，内容与本地构建一致。资料、边界与本地入口见[008 Web 说明](../projects/008-ruview/web/README.md)。
 
 005 OpenMAIC 已加入站点清单与构建流程并发布，静态输出为 `projects/005-openmaic/web/dist`，包含能力示例、理解汇总、六模块原理、五产品场景选型，以及 `case.html` 欧姆定律互动课堂。该子项目须先安装自身 npm 依赖；Python 构建会同时调用课堂打包。运行与验证见 [005 Web 说明](../projects/005-openmaic/web/README.md)。基础路径为 `/0912_codex_project/005-openmaic/`。静态案例不调用模型，也不代替完整 OpenMAIC 服务端。
 

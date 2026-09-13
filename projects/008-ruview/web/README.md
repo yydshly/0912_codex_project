@@ -2,9 +2,11 @@
 
 ## 研究汇总网页
 
-新增[本机研究汇总](http://127.0.0.1:8770/summary.html)，也可从 8768 服务访问同名页面。内容对应[理解笔记](../notes/understanding.md)，按原理、真实演示依赖、实测边界、价值与日常设备扩展、体验入口组织。真实监测、算法实验和虚拟房间页面均已提供“研究汇总”入口。
+在线入口：[RuView 原理、实测与日常设备扩展](https://yydshly.github.io/0912_codex_project/008-ruview/)。已于 2026-09-13 通过 GitHub Pages 发布并实际打开核验；[首次成功工作流](https://github.com/yydshly/0912_codex_project/actions/runs/34757308102)，对应提交 `6f8501b1e9984924c7d1782165113c14c0ca93b5`。网页总入口与本项目四个静态文件均为 HTTP 200，内容与本地构建一致（文本换行归一化后比较）。
 
-公开版已接入[站点清单](../../../docs/web-projects.json)和[Pages 工作流](../../../.github/workflows/pages.yml)，本次发布状态待远端核验。只发布四个静态文件，不包含本机采集服务、现场原始记录、上游缓存、模型或依赖。公开页面的实验入口指向启动说明；只有在本机 8768 / 8770 研究服务中，入口才切换为对应的本地实验地址。
+[本机研究汇总](http://127.0.0.1:8770/summary.html)也可从 8768 服务访问同名页面。内容对应[理解笔记](../notes/understanding.md)，按原理、真实演示依赖、实测边界、价值与日常设备扩展、体验入口组织。真实监测、算法实验和虚拟房间页面均已提供“研究汇总”入口。
+
+公开版接入[站点清单](../../../docs/web-projects.json)和[Pages 工作流](../../../.github/workflows/pages.yml)。只发布四个静态文件，不包含本机采集服务、现场原始记录、上游缓存、模型或依赖。公开页面的实验入口指向启动说明；只有在本机 8768 / 8770 研究服务中，入口才切换为对应的本地实验地址。
 
 源码：[summary.html](public/summary.html)、[summary.css](public/summary.css)、[summary.js](public/summary.js)。独立构建仅需 Python 3 标准库，无需 Rust、CSI 硬件或第三方 Python 依赖：
 
