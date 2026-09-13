@@ -1,0 +1,23 @@
+{
+  "repository": "https://github.com/ruvnet/RuView",
+  "commit": "33a9e90896a691a3f98de042b463e5945178b87c",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "f6f0fbda447f9374dd06cab17b764c485352f57f4d491471128a0525c10287c8"
+    },
+    {
+      "path": "archive/v1/src/sensing/rssi_collector.py",
+      "sha256": "08245a89aa5de5bcd59cbaf4817e4a9ef5c2692b64720a6be72f7bc95af27097"
+    },
+    {
+      "path": "archive/v1/src/sensing/feature_extractor.py",
+      "sha256": "6e3ed9e5ffe56c4c7429780c54cd287e3f77312d8d77691a49f840bb60ca2d8e"
+    },
+    {
+      "path": "archive/v1/src/sensing/classifier.py",
+      "sha256": "24f82fd4779d08461c976838c8819bb07816690f630ca2a65358f6d75c58b43b"
+    }
+  ]
+}

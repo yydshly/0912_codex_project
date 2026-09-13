@@ -1,0 +1,57 @@
+{
+  "commit": "33a9e90896a691a3f98de042b463e5945178b87c",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "f6f0fbda447f9374dd06cab17b764c485352f57f4d491471128a0525c10287c8"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/Cargo.toml",
+      "sha256": "4e7f4bb888035ece05ea7d4e56c1f7860295db91ba28a6eab63ddfdfb04cf806"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/README.md",
+      "sha256": "b61fc211e40140399116b48ee5591b969c14f9410cf24cd9d5aa88977d5eaa30"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/lib.rs",
+      "sha256": "1d3d491cf977aa945457060e113c063e8f672f6edcd0911d493997376ba2696a"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/anomaly.rs",
+      "sha256": "ca3783aed7748625e336f63c595d1c32126f84b23efec1f29d504193fe3fbcb4"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/breathing.rs",
+      "sha256": "93072765d0dde0aaf15b121bae2d727abc4b015ac6cefd21eb8ea258ca0fd5aa"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/groundtruth.rs",
+      "sha256": "b60eb65e620cd2dc64eb6d92760ef38fa7279caf33d16525cf14504d3975b404"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/heartrate.rs",
+      "sha256": "cd08d01e18df18e5706901391b583cfbd7219720fb4a5d86a6d5800165287b83"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/preprocessor.rs",
+      "sha256": "1fa10c54c55d6d4ead578c3de9827fa329f5e33cd367086fdb74e13f9e7e787f"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/store.rs",
+      "sha256": "18dc53ac744808a1dbf7946d95b54366f59b7bbaaf3f2be30f0242e0381ea53f"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/src/types.rs",
+      "sha256": "a6983f1740710f06a2da9550bb337b32b72c98d47d3072740c98424e2ed8ff6c"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/benches/vitals_bench.rs",
+      "sha256": "04fdceef807bd3bd4ecc20622c64f0246d1d40f224362d51e9b91ee4ce3c7bb0"
+    },
+    {
+      "path": "v2/crates/wifi-densepose-vitals/benches/groundtruth_bench.rs",
+      "sha256": "79cbfce1ead9621683e6729b2853ba911600c35c3bb52bc48becb607162b1773"
+    }
+  ]
+}

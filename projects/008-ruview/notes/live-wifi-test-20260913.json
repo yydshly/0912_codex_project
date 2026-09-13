@@ -1,0 +1,34 @@
+{
+  "source": "real-windows-netsh-rssi",
+  "upstream_commit": "33a9e90896a691a3f98de042b463e5945178b87c",
+  "start_local": "2026-09-13T18:53:49.971425+08:00",
+  "requested_duration_seconds": 180,
+  "sample_span_seconds": 179.842,
+  "samples": 356,
+  "observed_rate_hz": 1.974,
+  "rssi_min_dbm": -62.0,
+  "rssi_max_dbm": -56.0,
+  "rssi_changes": [
+    {
+      "elapsed_seconds": 61.985,
+      "from_dbm": -56.0,
+      "to_dbm": -62.0
+    }
+  ],
+  "classification_reports": 53,
+  "classification_counts": {
+    "absent": 49,
+    "active": 4
+  },
+  "active_report_elapsed_seconds": [
+    64.532,
+    67.532,
+    70.547,
+    73.61
+  ],
+  "user_response": "我暂时不方便配合动作",
+  "ground_truth": "No controlled human actions or independent occupancy labels; no accuracy estimate",
+  "raw_local_path": "real-wifi/recordings/20260913-185349-971973.jsonl",
+  "raw_sha256": "5e3b345a4a53ea61cbad4458a6e220f83c950e35dcab21d1468791a3e2840832",
+  "errors": []
+}

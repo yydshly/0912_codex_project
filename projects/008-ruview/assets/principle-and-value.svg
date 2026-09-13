@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="452" viewBox="0 0 960 452" role="img" aria-labelledby="title desc">
+  <title id="title">RuView：原理、真实演示依赖与研究价值</title>
+  <desc id="desc">路由器信号经多径传播，在接收端先叠加，芯片导出 CSI，算法再分析时间变化并推断状态。真实演示需要 CSI 设备、匹配软件与现场对照。本机只验证 RSSI 链路，人体效果未验证。可借鉴信号到事件联动的方法，扩展蓝牙设备感知和手机动作遥控。</desc>
+  <rect width="960" height="452" fill="#f8fafc"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#16283b">
+    <text x="32" y="44" font-size="26" font-weight="600">RuView：从无线信号到状态推断</text>
+    <text x="32" y="72" font-size="14" fill="#526476">原创概念图 · 非硬件测量、非人体检测结果 · 2026-09-13</text>
+    <g fill="#e8eff6" stroke="#c9d5e1">
+      <rect x="32" y="96" width="190" height="102" rx="10"/>
+      <rect x="268" y="96" width="190" height="102" rx="10"/>
+      <rect x="504" y="96" width="190" height="102" rx="10"/>
+      <rect x="740" y="96" width="188" height="102" rx="10"/>
+    </g>
+    <g fill="none" stroke="#526476" stroke-width="2">
+      <path d="M232 147 H256 M250 141 L256 147 L250 153"/>
+      <path d="M468 147 H492 M486 141 L492 147 L486 153"/>
+      <path d="M704 147 H728 M722 141 L728 147 L722 153"/>
+    </g>
+    <g text-anchor="middle">
+      <g font-size="19" font-weight="600">
+        <text x="127" y="132">路由器发射</text>
+        <text x="363" y="132">接收端先叠加</text>
+        <text x="599" y="132">CSI 记录细节</text>
+        <text x="834" y="132">算法分析变化</text>
+      </g>
+      <g font-size="14" fill="#405468">
+        <text x="127" y="161">直达、人体／墙壁反射</text>
+        <text x="127" y="182">形成多条传播路径</text>
+        <text x="363" y="161">人体移动改变路径</text>
+        <text x="363" y="182">收到混合后的信号</text>
+        <text x="599" y="161">各频点的幅度与相位</text>
+        <text x="599" y="182">提供传播变化线索</text>
+        <text x="834" y="161">按任务推断活动等状态</text>
+        <text x="834" y="182">姿态还需匹配模型</text>
+      </g>
+    </g>
+    <path d="M32 222 H928" stroke="#c9d5e1"/>
+    <text x="32" y="258" font-size="18" font-weight="600">真实演示依赖</text>
+    <text x="202" y="258" font-size="17">CSI 设备与固件 ＋ 无线链路 ＋ 接收与分析软件 ＋ 现场标定和对照</text>
+    <text x="32" y="305" font-size="18" font-weight="600">本机证据边界</text>
+    <text x="202" y="305" font-size="17">真实 RSSI 采集与分类已运行；走动无响应，人体感知效果未验证</text>
+    <text x="32" y="352" font-size="18" font-weight="600">对我们的意义</text>
+    <text x="202" y="352" font-size="17">先验证信号，再形成事件与联动；复用方法，分别适配输入和算法</text>
+    <text x="202" y="381" font-size="16" fill="#405468">日常设备方向：蓝牙设备感知、连接状态联动、手机动作遥控（待开发）</text>
+    <text x="32" y="428" font-size="14" fill="#526476">设备有数据 ≠ 已经识别人；动画和历史回放不能作为当前现场效果。</text>
+  </g>
+</svg>

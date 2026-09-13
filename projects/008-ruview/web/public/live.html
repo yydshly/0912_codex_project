@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="本机真实 WiFi RSSI 监测与 RuView 原版分类，支持已验证实测记录回放。"><title>RuView · 真实 WiFi 现场</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="live.css"></head>
+<body>
+<header><a class="brand" href="live.html"><span class="mark">◉</span> RuView <span>真实 WiFi 现场</span></a><span class="source-label">本机网卡 → 原版算法</span></header>
+<main>
+<div class="topline"><div><p class="eyebrow">LIVE SIGNAL MONITOR</p><h1>看见现场信号的变化。</h1></div><div class="connection" id="connection" role="status">正在连接本机采集服务…</div></div>
+<nav class="mode-switch" aria-label="数据来源"><button id="live-mode" class="selected" aria-pressed="true">实时采集</button><button id="replay-mode" aria-pressed="false">历史记录（不实时） <span>18:53 · 3 分钟</span></button></nav>
+<div id="mode-notice" class="mode-notice" role="status" hidden><div><strong id="mode-notice-title"></strong><p id="mode-notice-detail"></p></div><button id="return-live" class="primary" hidden>开始实时采集</button></div>
+<div id="error" class="error" role="alert" hidden></div>
+<div class="context"><span id="context-label">当前电脑 · WLAN · 真实 RSSI</span><span id="context-time">等待第一笔读数</span></div>
+<div class="monitor-grid">
+<section class="signal panel" aria-labelledby="signal-title"><div class="panel-top"><h2 id="signal-title">WiFi 信号</h2><span id="record-badge" class="badge">实时数据</span></div>
+<div class="signal-heading"><div class="reading"><strong id="rssi">—</strong><span>dBm</span></div><div class="signal-meta"><span id="sample-count">0 个真实样本</span><span id="signal-range">等待采集</span></div></div>
+<div class="chart-wrap"><canvas id="signal-chart" role="img" aria-label="真实 WiFi 信号强度随时间变化；横轴为秒，纵轴为 dBm。"></canvas><div id="chart-empty">正在读取网卡…</div></div>
+<div class="legend"><span><i class="lime"></i>网卡实测信号</span><span><i class="orange"></i>算法的活动候选时段</span></div>
+<div class="transport" id="live-controls"><span id="remaining">每次采集 3 分钟</span><div><button id="stop" disabled>停止采集</button><button id="start" class="primary" disabled>再采集 3 分钟</button></div></div>
+<div class="transport replay-transport" id="replay-controls" hidden><button id="play">▶ 播放实测</button><label class="sr-only" for="seek">实测回放时间</label><input id="seek" type="range" min="0" max="180" step="0.1" value="180"><output id="replay-time">180.0 s</output><button id="jump">跳到信号变化</button></div>
+<p id="signal-note" class="note">读数没有变化时，曲线会保持平直。这里不会人为生成波动。</p>
+</section>
+<aside class="result panel" aria-labelledby="result-title"><p class="eyebrow">RUVIEW OUTPUT</p><h2 id="result-title">原版算法判定</h2><div id="verdict" class="verdict">等待数据</div><p id="verdict-detail">积累 15 秒真实读数后开始计算。</p>
+<dl class="measurements"><div><dt>信号波动</dt><dd id="variance">—</dd></div><div><dt>运动频段能量</dt><dd id="energy">—</dd></div><div><dt>分析窗口</dt><dd>最近 15 秒</dd></div><div><dt>最新判定</dt><dd id="report-time">—</dd></div></dl>
+<div class="boundary"><b>当前能看到什么</b><p>真实信号与活动候选。活动候选不等于确认有人；当前网卡没有提供人数、骨架或呼吸数据。</p></div>
+</aside></div>
+<section class="events panel"><div class="panel-top"><div><p class="eyebrow">MEASUREMENT LOG</p><h2>这段时间发生了什么</h2></div><button id="download" disabled>下载当前记录 ↓</button></div><ol id="event-list"><li>等待采集记录…</li></ol></section>
+<footer><span id="provenance">真实 Windows RSSI · 原版分类 · 人体动作检测尚未验证</span><span>仅在此电脑运行</span></footer>
+</main><script type="module" src="live.js"></script></body></html>

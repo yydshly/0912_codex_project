@@ -1,0 +1,75 @@
+[
+  {
+    "preset": "rest",
+    "result": {
+      "breathing": {
+        "bpm": 15.0,
+        "confidence": 0.9962141684038925,
+        "status": "Valid"
+      },
+      "heart": {
+        "bpm": 73.17073170731707,
+        "confidence": 0.6364730035723928,
+        "status": "Valid"
+      }
+    },
+    "elapsed_ms": 25.5896,
+    "frames_displayed": 226
+  },
+  {
+    "preset": "fast",
+    "result": {
+      "breathing": {
+        "bpm": 24.0,
+        "confidence": 0.9999997286266916,
+        "status": "Valid"
+      },
+      "heart": {
+        "bpm": 103.44827586206895,
+        "confidence": 0.34458595644274304,
+        "status": "Degraded"
+      }
+    },
+    "elapsed_ms": 26.0915,
+    "frames_displayed": 226
+  },
+  {
+    "preset": "motion",
+    "result": {
+      "breathing": null,
+      "heart": {
+        "bpm": 49.18032786885246,
+        "confidence": 0.6270635218389083,
+        "status": "Valid"
+      }
+    },
+    "elapsed_ms": 23.8702,
+    "frames_displayed": 226
+  },
+  {
+    "preset": "single",
+    "result": {
+      "breathing": {
+        "bpm": 15.0,
+        "confidence": 0.9961886968899183,
+        "status": "Valid"
+      },
+      "heart": {
+        "bpm": 73.17073170731707,
+        "confidence": 0.1593270243743319,
+        "status": "Unreliable"
+      }
+    },
+    "elapsed_ms": 26.159399999999998,
+    "frames_displayed": 226
+  },
+  {
+    "preset": "empty",
+    "result": {
+      "breathing": null,
+      "heart": null
+    },
+    "elapsed_ms": 2.4648,
+    "frames_displayed": 226
+  }
+]

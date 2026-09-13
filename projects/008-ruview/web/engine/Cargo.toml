@@ -1,0 +1,9 @@
+[package]
+name = "ruview-lab"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+wifi-densepose-vitals = { path = "../.upstream/RuView/v2/crates/wifi-densepose-vitals" }
+serde_json = "1"
